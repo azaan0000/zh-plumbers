@@ -56,16 +56,16 @@
  <input type="text" id="p-name" placeholder="Naam likhein">
  <label>WhatsApp / Phone *</label>
  <input type="tel" id="p-phone" placeholder="03XX-XXXXXXX">
+ <label>Mulk / Country *</label>
+ <input type="text" id="p-country" value="Pakistan" placeholder="Jaise: Pakistan, Saudi Arabia, UK">
  <label>Sheher / City *</label>
- <select id="p-city">
-   <option value="Gujjar Khan">Gujjar Khan</option>
-   <option value="Rawalpindi">Rawalpindi</option>
-   <option value="Islamabad">Islamabad</option>
-   <option value="Taxila">Taxila</option>
-   <option value="Wah Cantt">Wah Cantt</option>
-   <option value="Kahuta">Kahuta</option>
-   <option value="Other">Doosra</option>
- </select>
+ <input type="text" id="p-city" placeholder="Jaise: Rawalpindi, Riyadh, London">
+ <label>Location (optional)</label>
+ <div style="display:flex;gap:8px;align-items:center">
+   <input type="number" id="p-lat" step="any" placeholder="Latitude">
+   <input type="number" id="p-lng" step="any" placeholder="Longitude">
+ </div>
+ <button type="button" style="margin-top:8px;padding:8px 10px;border-radius:7px;border:1px solid #334155;background:#172554;color:#bae6fd;cursor:pointer" onclick="useLocation()">📍 Meri current location use karein</button>
  <label>Kaun Se Areas Mein Kaam Karte Hain</label>
  <input type="text" id="p-areas" placeholder="Jaise: Bahria Town, Satellite Town, Murree Road">
  <label>Services</label>
@@ -78,20 +78,34 @@
  <p class="fine">Sawal hai? <a href="https://wa.me/923705840165?text=Assalam%20o%20Alaikum!%20Mujhe%20ZH%20Plumbing%20Network%20join%20karna%20hai." target="_blank" rel="noopener">WhatsApp par rabta karein</a></p>
 </div>
 <script>
+function useLocation(){
+  var out=document.getElementById('p-result');
+  out.style.display='block'; out.className='result ok'; out.textContent='Location hasil ho rahi hai...';
+  if(!navigator.geolocation){out.className='result bad';out.textContent='Is device par location available nahi.';return;}
+  navigator.geolocation.getCurrentPosition(function(pos){
+    document.getElementById('p-lat').value=pos.coords.latitude.toFixed(6);
+    document.getElementById('p-lng').value=pos.coords.longitude.toFixed(6);
+    out.textContent='✓ Location add ho gayi.';
+  },function(){out.className='result bad';out.textContent='Location permission nahi mili — aap fields manually bhar sakte hain.';});
+}
+
 function joinNow(){
   var name=document.getElementById('p-name').value.trim();
   var phone=document.getElementById('p-phone').value.trim();
-  var city=document.getElementById('p-city').value;
+  var country=document.getElementById('p-country').value.trim();
+  var city=document.getElementById('p-city').value.trim();
+  var latitude=parseFloat(document.getElementById('p-lat').value);
+  var longitude=parseFloat(document.getElementById('p-lng').value);
   var areas=document.getElementById('p-areas').value.trim();
   var services=document.getElementById('p-services').value.trim();
   var experience=document.getElementById('p-exp').value.trim();
   var out=document.getElementById('p-result');
   out.style.display='block';
-  if(!name||!phone){out.className='result bad';out.textContent='Naam aur phone number zaroori hai.';return;}
+  if(!name||!phone||!country||!city){out.className='result bad';out.textContent='Naam, phone, mulk aur sheher zaroori hain.';return;}
   out.className='result ok';out.textContent='Bhej rahe hain...';
   fetch('https://superagent-f5d1d063.base44.app/functions/createPlumberPartner',{
     method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({name:name,phone:phone,city:city,areas:areas,services:services,experience:experience})
+    body:JSON.stringify({name:name,phone:phone,country:country,city:city,latitude:isFinite(latitude)?latitude:null,longitude:isFinite(longitude)?longitude:null,areas:areas,services:services,experience:experience})
   }).then(function(r){return r.json();}).then(function(d){
     if(d.ok){out.className='result ok';out.textContent='✓ Register ho gaya! ZH Plumbing team aap se rabta kar ke network ka process samjhayegi.';
       document.getElementById('p-name').value='';document.getElementById('p-phone').value='';document.getElementById('p-areas').value='';}
@@ -101,3 +115,4 @@ function joinNow(){
 </script>
 </body>
 </html>
+
