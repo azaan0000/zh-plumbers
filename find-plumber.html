@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<title>Find Plumbers Near Me — ZH Plumbers Network</title>
+<meta name="description" content="Find trusted plumbers near you worldwide through the ZH Plumbers Network. Use your location to see verified plumbing partners in your city — quotes on contact, no fixed prices.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://azaan0000.github.io/zh-plumbers/find-plumber.html">
+<meta property="og:title" content="Find Plumbers Near Me — ZH Plumbers Network">
+<meta property="og:description" content="Use your location to find plumbing partners near you, worldwide. Quote on contact.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "name": "Find Plumbers Near Me — ZH Plumbers Network",
+ "description": "Location-based plumber search through the ZH Plumbers Network. Verified partners worldwide, quote on contact."
+}
+</script>
+<style>
+ body{font-family:'Poppins',sans-serif;background:#0f172a;color:#e2e8f0;margin:0;padding:40px 20px;line-height:1.7}
+ .wrap{max-width:720px;margin:0 auto}
+ .back{display:inline-block;color:#38bdf8;text-decoration:none;font-size:14px;font-weight:600;margin-bottom:18px}
+ h1{font-family:'Oswald',sans-serif;font-size:32px;margin:0 0 8px;color:#fff}
+ .sub{color:#94a3b8;margin:0 0 24px;font-size:15px}
+ .card{background:#1e293b;border-radius:16px;padding:28px 24px;box-shadow:0 20px 60px rgba(0,0,0,.4);margin-bottom:20px}
+ .btn-loc{display:block;width:100%;padding:15px;border:none;border-radius:10px;background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;font-size:17px;font-weight:700;cursor:pointer;font-family:inherit}
+ .btn-loc:active{transform:scale(.98)}
+ .hint{text-align:center;color:#64748b;font-size:13px;margin-top:10px}
+ #status{margin-top:14px;padding:12px;border-radius:8px;font-size:14px;display:none}
+ .busy{background:#0b2540;color:#7dd3fc;border:1px solid #1e4e79}
+ .ok{background:#052e1a;color:#4ade80;border:1px solid #14532d}
+ .bad{background:#3b0d0d;color:#fca5a5;border:1px solid #7f1d1d}
+ .plumber{background:#0f172a;border:1px solid #334155;border-radius:12px;padding:18px 16px;margin:12px 0}
+ .p-name{font-family:'Oswald',sans-serif;font-size:18px;color:#fff;margin:0}
+ .p-meta{font-size:13px;color:#94a3b8;margin:4px 0 0}
+ .p-dist{display:inline-block;background:#052e1a;color:#4ade80;font-size:12px;font-weight:700;border-radius:20px;padding:3px 10px;margin-top:8px}
+ .btn-wa{display:inline-block;margin-top:10px;padding:10px 18px;border-radius:8px;background:#25d366;color:#04331a;font-weight:700;font-size:14px;text-decoration:none}
+ .empty{color:#94a3b8;font-size:15px;text-align:center;padding:10px 0}
+ .foot-note{color:#64748b;font-size:12px;margin-top:26px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; ZH Plumbing Service</a>
+  <h1>Find Plumbers Near Me</h1>
+  <p class="sub">Apni location allow karein — aas paas ke verified plumbing partners foran dikh jayenge. Duniya mein kahin bhi kaam karta hai.</p>
+
+  <div class="card">
+    <button class="btn-loc" onclick="findNearMe()">📍 Use My Location</button>
+    <p class="hint">Browser se location permission mangega — sirf plumbing search ke liye use hoti hai.</p>
+    <div id="status"></div>
+  </div>
+
+  <div class="card" id="results" style="display:none">
+    <h2 style="font-family:'Oswald',sans-serif;font-size:20px;margin:0 0 6px;color:#fff">Aap ke qareeb ke plumbers</h2>
+    <div id="list"></div>
+  </div>
+
+  <p class="foot-note">ZH Plumbers Network — quotes on contact. Koi fixed rate nahi. Verified partners only.</p>
+</div>
+
+<script>
+function setStatus(cls, msg) {
+  var s = document.getElementById('status');
+  s.style.display = 'block';
+  s.className = cls;
+  s.textContent = msg;
+}
+function waLink(name, km) {
+  var txt = 'Assalam o Alaikum! Mujhe "' + name + '" (approx ' + km + ' km) ke zariye plumbing service chahiye. ZH Plumbers Network se contact kar raha hoon.';
+  return 'https://wa.me/923705840165?text=' + encodeURIComponent(txt);
+}
+function render(data) {
+  var list = document.getElementById('list');
+  document.getElementById('results').style.display = 'block';
+  if (!data.plumbers || data.plumbers.length === 0) {
+    list.innerHTML = '<p class="empty">Is location ke 15 km mein abhi koi partner listed nahi — magar network roz grow ho raha hai. Seedha WhatsApp karein, hum dekh lete hain.</p><a class="btn-wa" href="' + waLink('ZH dispatch', 0) + '">💬 WhatsApp Karein</a>';
+    return;
+  }
+  list.innerHTML = data.plumbers.map(function (p) {
+    var meta = [p.city, p.country].filter(Boolean).join(', ');
+    if (p.services) meta += ' — ' + p.services;
+    if (p.experience) meta += ' (' + p.experience + ' experience)';
+    return '<div class="plumber"><p class="p-name">' + p.name + '</p>' +
+      '<p class="p-meta">' + meta + '</p>' +
+      '<span class="p-dist">📍 ' + p.distance_km + ' km away</span><br>' +
+      '<a class="btn-wa" href="' + waLink(p.name, p.distance_km) + '">💬 Is plumber se quote lein</a></div>';
+  }).join('');
+}
+function search(lat, lng) {
+  setStatus('busy', '🔍 Aas paas ke plumbers dhoond rahe hain...');
+  fetch('https://superagent-f5d1d063.base44.app/functions/findPlumbersNearMe?lat=' + lat + '&lng=' + lng + '&radius=15')
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      if (d.ok) { setStatus('ok', '✅ ' + d.count + ' partner' + (d.count === 1 ? '' : 's') + ' mile aap ke 15 km mein.'); render(d); }
+      else setStatus('bad', '⚠️ ' + (d.error || 'Search fail ho gayi — dobara try karein.'));
+    })
+    .catch(function () { setStatus('bad', '⚠️ Network error — dobara try karein.'); });
+}
+function findNearMe() {
+  if (!navigator.geolocation) { setStatus('bad', '⚠️ Aap ke browser mein location support nahi.'); return; }
+  setStatus('busy', '📡 Location le rahe hain...');
+  navigator.geolocation.getCurrentPosition(
+    function (pos) { search(pos.coords.latitude, pos.coords.longitude); },
+    function () { setStatus('bad', '⚠️ Location permission nahi mili. Permission allow kar ke dobara try karein.'); },
+    { enableHighAccuracy: true, timeout: 10000 }
+  );
+}
+</script>
+</body>
+</html>
