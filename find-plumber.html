@@ -5,12 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="assets/logo.png">
 <title>Find Plumbers Near Me — ZH Plumbers Network</title>
-<meta name="description" content="Find trusted plumbers near you worldwide through the ZH Plumbers Network. Use your location to see verified plumbing partners in your city — quotes on contact, no fixed prices.">
+<meta name="description" content="Find trusted plumbers near you worldwide through the ZH Plumbers Network. Use your location or search your city to see verified plumbing partners — quotes on contact, no fixed prices.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://azaan0000.github.io/zh-plumbers/find-plumber.html">
 <meta property="og:title" content="Find Plumbers Near Me — ZH Plumbers Network">
-<meta property="og:description" content="Use your location to find plumbing partners near you, worldwide. Quote on contact.">
+<meta property="og:description" content="Use your location or search your city to find plumbing partners near you, worldwide. Quote on contact.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://azaan0000.github.io/zh-plumbers/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -36,6 +38,12 @@
  .busy{background:#0b2540;color:#7dd3fc;border:1px solid #1e4e79}
  .ok{background:#052e1a;color:#4ade80;border:1px solid #14532d}
  .bad{background:#3b0d0d;color:#fca5a5;border:1px solid #7f1d1d}
+ .divider{display:flex;align-items:center;gap:10px;color:#64748b;font-size:13px;margin:18px 0}
+ .divider:before,.divider:after{content:"";flex:1;height:1px;background:#334155}
+ .city-row{display:flex;gap:10px}
+ .city-row input{flex:1;padding:13px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#fff;font-size:15px;font-family:inherit}
+ .city-row input:focus{outline:none;border-color:#38bdf8}
+ .btn-city{padding:13px 20px;border:none;border-radius:10px;background:#38bdf8;color:#0c2434;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap}
  .plumber{background:#0f172a;border:1px solid #334155;border-radius:12px;padding:18px 16px;margin:12px 0}
  .p-name{font-family:'Oswald',sans-serif;font-size:18px;color:#fff;margin:0}
  .p-meta{font-size:13px;color:#94a3b8;margin:4px 0 0}
@@ -44,27 +52,34 @@
  .empty{color:#94a3b8;font-size:15px;text-align:center;padding:10px 0}
  .foot-note{color:#64748b;font-size:12px;margin-top:26px;text-align:center}
 </style>
-<meta property="og:image" content="https://azaan0000.github.io/zh-plumbers/assets/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 <div class="wrap">
   <a class="back" href="index.html">&larr; ZH Plumbing Service</a>
   <h1>Find Plumbers Near Me</h1>
-  <p class="sub">Allow your location and instantly see verified plumbing partners near you — works anywhere in the world.</p>
+  <p class="sub" id="fp-sub">Allow your location and instantly see plumbing partners near you — works anywhere in the world. Or search your city below.</p>
 
   <div class="card">
-    <button class="btn-loc" onclick="findNearMe()">📍 Use My Location</button>
-    <p class="hint">Your browser will ask for location permission — used only for this search.</p>
+    <button class="btn-loc" id="btn-loc" onclick="findNearMe()">📍 Use My Location</button>
+    <p class="hint" id="fp-hint">Your browser will ask for location permission — used only for this search.</p>
     <div id="status"></div>
+    <div class="divider">or search your city / area</div>
+    <div class="city-row">
+      <input id="city-input" type="text" list="city-suggest" placeholder="e.g. Rawalpindi, Dubai, London, Riyadh" onkeydown="if(event.key==='Enter')searchCity()">
+      <datalist id="city-suggest">
+        <option value="Rawalpindi"><option value="Islamabad"><option value="Gujjar Khan"><option value="Lahore">
+        <option value="Dubai"><option value="Riyadh"><option value="London"><option value="Toronto">
+      </datalist>
+      <button class="btn-city" onclick="searchCity()">Search</button>
+    </div>
   </div>
 
   <div class="card" id="results" style="display:none">
-    <h2 style="font-family:'Oswald',sans-serif;font-size:20px;margin:0 0 6px;color:#fff">Plumbers near you</h2>
+    <h2 style="font-family:'Oswald',sans-serif;font-size:20px;margin:0 0 6px;color:#fff" id="fp-results-title">Plumbers near you</h2>
     <div id="list"></div>
   </div>
 
-  <p class="foot-note">ZH Plumbers Network — quotes on contact. No fixed rates. Verified partners only.</p>
+  <p class="foot-note" id="fp-foot">ZH Plumbers Network — quotes on contact. No fixed rates. Real partners only.</p>
 </div>
 
 <script>
@@ -74,55 +89,71 @@ function setStatus(cls, msg) {
   s.className = cls;
   s.textContent = msg;
 }
+function hideStatus() { document.getElementById('status').style.display = 'none'; }
 function waLink(name, km) {
-  var txt = 'Hello! I found "' + name + '" (approx ' + km + ' km away) on the ZH Plumbers Network and would like a plumbing service quote.';
+  var loc = km ? ' (approx ' + km + ' km away)' : '';
+  var txt = 'Hello! I found "' + name + '"' + loc + ' on the ZH Plumbers Network and would like a plumbing service quote.';
   return 'https://wa.me/923705840165?text=' + encodeURIComponent(txt);
 }
 function render(data) {
   var list = document.getElementById('list');
   document.getElementById('results').style.display = 'block';
   if (!data.plumbers || data.plumbers.length === 0) {
-    list.innerHTML = '<p class="empty">No partners listed within 15 km of this location yet — but the network is growing daily. Message us on WhatsApp and we'll take care of it.</p><a class="btn-wa" href="' + waLink('ZH dispatch', 0) + '">💬 Message Us on WhatsApp</a>';
+    list.innerHTML = '<p class="empty">No partners listed for this location yet — but the network is growing daily. Message us on WhatsApp and we will take care of it.</p><a class="btn-wa" href="' + waLink('ZH dispatch', 0) + '">💬 Message Us on WhatsApp</a>';
     return;
   }
   list.innerHTML = data.plumbers.map(function (p) {
     var meta = [p.city, p.country].filter(Boolean).join(', ');
     if (p.services) meta += ' — ' + p.services;
     if (p.experience) meta += ' (' + p.experience + ' experience)';
+    var dist = p.distance_km === null || p.distance_km === undefined ? '<span class="p-dist">📍 ' + (p.city || '') + '</span>' : '<span class="p-dist">📍 ' + p.distance_km + ' km away</span>';
     return '<div class="plumber"><p class="p-name">' + p.name + '</p>' +
       '<p class="p-meta">' + meta + '</p>' +
-      '<span class="p-dist">📍 ' + p.distance_km + ' km away</span><br>' +
+      dist + '<br>' +
       '<a class="btn-wa" href="' + waLink(p.name, p.distance_km) + '">💬 Get a quote from this plumber</a></div>';
   }).join('');
 }
-function search(lat, lng) {
-  setStatus('busy', '🔍 Searching for plumbers near you...');
-  fetch('https://superagent-f5d1d063.base44.app/functions/findPlumbersNearMe?lat=' + lat + '&lng=' + lng + '&radius=15')
+function searchFailed(msg) {
+  setStatus('bad', msg);
+}
+function doSearch(params) {
+  setStatus('busy', zhT('🔍 Searching for plumbers...'));
+  fetch('https://superagent-f5d1d063.base44.app/functions/findPlumbersNearMe?' + params)
     .then(function (r) { return r.json(); })
     .then(function (d) {
-      if (d.ok) { setStatus('ok', '✅ ' + d.count + ' partner' + (d.count === 1 ? '' : 's') + ' found within 15 km.'); render(d); }
-      else setStatus('bad', '⚠️ ' + (d.error || 'Search failed — please try again.'));
+      if (d.ok) {
+        setStatus('ok', '✅ ' + d.count + ' partner' + (d.count === 1 ? '' : 's') + ' found' + (d.mode === 'location' ? ' within 15 km.' : '.'));
+        render(d);
+      } else searchFailed('⚠️ ' + (d.error || 'Search failed — please try again.'));
     })
-    .catch(function () { setStatus('bad', '⚠️ Network error — please try again.'); });
+    .catch(function () { searchFailed('⚠️ Network error — please try again.'); });
+}
+function searchCity() {
+  var city = (document.getElementById('city-input').value || '').trim();
+  if (city.length < 2) { setStatus('bad', zhT('⚠️ Please type a city or area name.')); return; }
+  doSearch('city=' + encodeURIComponent(city));
 }
 function findNearMe() {
-  if (!navigator.geolocation) { setStatus('bad', '⚠️ Location is not supported by your browser.'); return; }
-  setStatus('busy', '📡 Getting your location...');
+  if (!navigator.geolocation) { setStatus('bad', '⚠️ Location is not supported by this browser — use the city search below.'); return; }
+  setStatus('busy', zhT('📡 Getting your location...'));
+  // watchdog: agar 9 second mein koi jawab na aaye (kai mobile browsers / WhatsApp built-in browser location block kar dete hain)
+  var watchdog = setTimeout(function () {
+    setStatus('bad', '⚠️ Location is not responding. Your browser or app may be blocking location — please open this page in Chrome, or just type your city in the search below.');
+  }, 9000);
   navigator.geolocation.getCurrentPosition(
-    function (pos) { search(pos.coords.latitude, pos.coords.longitude); },
-    function () { setStatus('bad', '⚠️ Location permission denied. Please allow access and try again.'); },
-    { enableHighAccuracy: true, timeout: 10000 }
+    function (pos) {
+      clearTimeout(watchdog);
+      doSearch('lat=' + pos.coords.latitude + '&lng=' + pos.coords.longitude + '&radius=15');
+    },
+    function (err) {
+      clearTimeout(watchdog);
+      if (err && err.code === 1) setStatus('bad', '⚠️ Location permission denied. Please allow access and try again — or type your city in the search below.');
+      else setStatus('bad', '⚠️ Could not get your location — please type your city in the search below.');
+    },
+    { enableHighAccuracy: true, timeout: 8000, maximumAge: 60000 }
   );
 }
 </script>
-<script>
-(function(){
- var t=encodeURIComponent(document.title+' — Expert Plumbing, Fast Response: '+location.href);
- var d=document.createElement('div');
- d.style.cssText='position:fixed;bottom:14px;right:14px;z-index:9990;display:flex;gap:8px';
- d.innerHTML='<a href="https://wa.me/?text='+t+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on WhatsApp">&#128172;</a><a href="https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#1877f2;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on Facebook">f</a>';
- document.body.appendChild(d);
-})();
-</script>
+<script src="assets/lang.js"></script>
 </body>
 </html>
