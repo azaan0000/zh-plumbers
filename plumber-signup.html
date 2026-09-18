@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="assets/logo.png">
-<title>Plumbers Join Karein — Jobs Apke Area Mein | ZH Plumbing Network</title>
+<title>Join Our Plumbing Network — Get Jobs in Your Area | ZH Plumbers</title>
 <meta name="description" content="Plumber hain? ZH Plumbing Network se join karein — apne area ke plumbing jobs directly milein, payment 100% aapki, registration free. Rawalpindi, Islamabad, Gujjar Khan ke tamam areas.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://azaan0000.github.io/zh-plumbers/plumber-signup.html">
@@ -47,48 +47,48 @@
 <body>
 <div class="card">
  <h1><img src="assets/logo.png" alt="ZH logo" style="width:44px;height:44px;border-radius:10px;vertical-align:middle"> Plumbers — Join ZH Network</h1>
- <p class="sub">Apne area ke jobs directly payein. Registration <b>bilkul free</b> hai.</p>
+ <p class="sub">Get plumbing jobs directly in your area. Registration is <b>100% free</b>.</p>
 
- <div class="benefit"><h3>📲 Jobs Aapke Paas</h3><p>Jab bhi aapke area mein client ka plumbing kaam aata hai, hum directly aapko batate hain — client ki detail, kaam ki detail, sab ready.</p></div>
- <div class="benefit"><h3>💰 Payment 100% Aapki</h3><p>Jo client se rate final hota hai us ka himmat wala hissa (15-20% network fee) hum rakhte hain — baki poori payment seedha aapki. Rate aap khud set karte hain.</p></div>
- <div class="benefit"><h3>⚡ Koi Registration Fee Nahi</h3><p>Na monthly charge, na signup fee. Sirf us kaam par fee hai jo hum aapko dilwate hain.</p></div>
- <div class="benefit"><h3>📍 Hum ke Areas</h3><p>Gujjar Khan, Rawalpindi (Satellite Town, Bahria Town, DHA, Murree Road...), Islamabad, Taxila, Wah Cantt, Kahuta aur tamam aas paas ke areas.</p></div>
+ <div class="benefit"><h3>📲 Jobs Come to You</h3><p>Whenever a client needs plumbing work in your area, we send you the details — client info and job description, all ready.</p></div>
+ <div class="benefit"><h3>💰 Payment 100% Yours</h3><p>You agree the rate with the client; we keep a small network fee (15-20%) only on jobs we bring you — the rest goes straight to you. Rate aap khud set karte hain.</p></div>
+ <div class="benefit"><h3>⚡ No Registration Fee</h3><p>No monthly charge, no signup fee. You only pay a fee on the jobs we bring you.</p></div>
+ <div class="benefit"><h3>📍 Our Areas</h3><p>Gujjar Khan, Rawalpindi (Satellite Town, Bahria Town, DHA, Murree Road...), Islamabad, Taxila, Wah Cantt, Kahuta and nearby areas — with new cities being added worldwide.</p></div>
 
- <label>Aapka Naam *</label>
- <input type="text" id="p-name" placeholder="Naam likhein">
+ <label>Your Name *</label>
+ <input type="text" id="p-name" placeholder="Enter your name">
  <label>WhatsApp / Phone *</label>
- <input type="tel" id="p-phone" placeholder="03XX-XXXXXXX">
- <label>Mulk / Country *</label>
- <input type="text" id="p-country" value="Pakistan" placeholder="Jaise: Pakistan, Saudi Arabia, UK">
- <label>Sheher / City *</label>
- <input type="text" id="p-city" placeholder="Jaise: Rawalpindi, Riyadh, London">
+ <input type="tel" id="p-phone" placeholder="+92 3XX-XXXXXXX">
+ <label>Country *</label>
+ <input type="text" id="p-country" value="Pakistan" placeholder="e.g. Pakistan, Saudi Arabia, UK">
+ <label>City *</label>
+ <input type="text" id="p-city" placeholder="e.g. Rawalpindi, Riyadh, London">
  <label>Location (optional)</label>
  <div style="display:flex;gap:8px;align-items:center">
    <input type="number" id="p-lat" step="any" placeholder="Latitude">
    <input type="number" id="p-lng" step="any" placeholder="Longitude">
  </div>
  <button type="button" style="margin-top:8px;padding:8px 10px;border-radius:7px;border:1px solid #334155;background:#172554;color:#bae6fd;cursor:pointer" onclick="useLocation()">📍 Meri current location use karein</button>
- <label>Kaun Se Areas Mein Kaam Karte Hain</label>
- <input type="text" id="p-areas" placeholder="Jaise: Bahria Town, Satellite Town, Murree Road">
+ <label>Areas You Work In</label>
+ <input type="text" id="p-areas" placeholder="e.g. Bahria Town, Satellite Town, Murree Road">
  <label>Services</label>
- <input type="text" id="p-services" placeholder="Jaise: leak repair, geyser, concealed piping, bathroom fitting">
- <label>Tajurba / Experience</label>
- <input type="text" id="p-exp" placeholder="Jaise: 8 saal, sab kaam karta hoon">
+ <input type="text" id="p-services" placeholder="e.g. leak repair, geyser installation, concealed piping, bathroom fitting">
+ <label>Experience</label>
+ <input type="text" id="p-exp" placeholder="e.g. 8 years, all-round plumber">
 
- <button class="btn" onclick="joinNow()">Register Karein — Free ▸</button>
+ <button class="btn" onclick="joinNow()">Register Free ▸</button>
  <div class="result" id="p-result"></div>
- <p class="fine">Sawal hai? <a href="https://wa.me/923705840165?text=Assalam%20o%20Alaikum!%20Mujhe%20ZH%20Plumbing%20Network%20join%20karna%20hai." target="_blank" rel="noopener">WhatsApp par rabta karein</a></p>
+ <p class="fine">Questions? <a href="https://wa.me/923705840165?text=Hello!%20I%20would%20like%20to%20join%20the%20ZH%20Plumbers%20Network." target="_blank" rel="noopener">Contact us on WhatsApp</a></p>
 </div>
 <script>
 function useLocation(){
   var out=document.getElementById('p-result');
-  out.style.display='block'; out.className='result ok'; out.textContent='Location hasil ho rahi hai...';
-  if(!navigator.geolocation){out.className='result bad';out.textContent='Is device par location available nahi.';return;}
+  out.style.display='block'; out.className='result ok'; out.textContent='Getting your location...';
+  if(!navigator.geolocation){out.className='result bad';out.textContent='Location is not available on this device.';return;}
   navigator.geolocation.getCurrentPosition(function(pos){
     document.getElementById('p-lat').value=pos.coords.latitude.toFixed(6);
     document.getElementById('p-lng').value=pos.coords.longitude.toFixed(6);
-    out.textContent='✓ Location add ho gayi.';
-  },function(){out.className='result bad';out.textContent='Location permission nahi mili — aap fields manually bhar sakte hain.';});
+    out.textContent='✓ Location added.';
+  },function(){out.className='result bad';out.textContent='Location permission denied — you can fill the fields manually.';});
 }
 
 function joinNow(){
@@ -103,30 +103,30 @@ function joinNow(){
   var experience=document.getElementById('p-exp').value.trim();
   var out=document.getElementById('p-result');
   out.style.display='block';
-  if(!name||!phone||!country||!city){out.className='result bad';out.textContent='Naam, phone, mulk aur sheher zaroori hain.';return;}
-  out.className='result ok';out.textContent='Bhej rahe hain...';
+  if(!name||!phone||!country||!city){out.className='result bad';out.textContent='Name, phone, country and city are required.';return;}
+  out.className='result ok';out.textContent='Submitting...';
   fetch('https://superagent-f5d1d063.base44.app/functions/createPlumberPartner',{
     method:'POST',headers:{'Content-Type':'application/json'},
     body:JSON.stringify({name:name,phone:phone,country:country,city:city,latitude:isFinite(latitude)?latitude:null,longitude:isFinite(longitude)?longitude:null,areas:areas,services:services,experience:experience})
   }).then(function(r){return r.json();}).then(function(d){
-    if(d.ok){out.className='result ok';out.textContent='✓ Register ho gaya! ZH Plumbing team aap se rabta kar ke network ka process samjhayegi.';
+    if(d.ok){out.className='result ok';out.textContent='✓ Registered! The ZH Plumbers team will contact you and explain how the network works.';
       document.getElementById('p-name').value='';document.getElementById('p-phone').value='';document.getElementById('p-areas').value='';}
-    else{out.className='result bad';out.textContent=d.error||'Masla aaya — WhatsApp par rabta karein.';}
-  }).catch(function(){out.className='result bad';out.textContent='Internet masla — dobara koshish karein.';});
+    else{out.className='result bad';out.textContent=d.error||'Something went wrong — please contact us on WhatsApp.';}
+  }).catch(function(){out.className='result bad';out.textContent='Network error — please try again.';});
 }
 </script>
 
 <div style="max-width:640px;margin:26px auto 0;background:#1e293b;border-radius:16px;padding:30px 26px;box-shadow:0 20px 60px rgba(0,0,0,.4)">
- <h2 style="font-family:'Oswald',sans-serif;font-size:22px;margin:0 0 10px;color:#fff">📍 Jobs WhatsApp Group — System Kaise Chalta Hai</h2>
- <p style="color:#94a3b8;font-size:14px;margin:0 0 14px">Job alerts group join karein — client jab plumbing ka kaam karwana chahega to ZH Plumbing Network job yahan post karega:</p>
+ <h2 style="font-family:'Oswald',sans-serif;font-size:22px;margin:0 0 10px;color:#fff">📍 Jobs WhatsApp Group — How the System Works</h2>
+ <p style="color:#94a3b8;font-size:14px;margin:0 0 14px">Join the job alerts group — when a client needs plumbing work, the ZH Plumbers Network posts the job here:</p>
  <ol style="color:#cbd5e1;font-size:14px;line-height:1.9;padding-left:20px;margin:0 0 16px">
-  <li><b style="color:#38bdf8">Job post:</b> Group mein area, service aur client ki details aayengi</li>
-  <li><b style="color:#38bdf8">First come, first served:</b> Jo plumber pehle accept kare, job uski</li>
-  <li><b style="color:#38bdf8">Payment:</b> Client se payment seedha plumber ko — network fee 15-20%</li>
-  <li><b style="color:#38bdf8">Freedom:</b> Jo job na lena chahe, wo ignore kare — jo service hi nahi chahta, group se exit kar de. Koi zabardasti nahi</li>
+  <li><b style="color:#38bdf8">Job posts:</b> The area, service and client details are posted in the group</li>
+  <li><b style="color:#38bdf8">First come, first served:</b> The first plumber to accept gets the job</li>
+  <li><b style="color:#38bdf8">Payment:</b> The client pays the plumber directly — network fee 15-20%</li>
+  <li><b style="color:#38bdf8">Freedom:</b> Ignore any job you don't want — and if the service doesn't suit you at all, simply leave the group. No obligations</li>
  </ol>
- <a href="https://chat.whatsapp.com/FC6wOs3y3ZG9823dKK1bd4" style="display:block;text-align:center;padding:14px;border-radius:10px;background:linear-gradient(135deg,#25d366,#1ebe57);color:#04331a;font-size:16px;font-weight:700;text-decoration:none">💬 Jobs Group Join Karein (Free)</a>
- <p style="color:#64748b;font-size:12px;margin:12px 0 0">WhatsApp group ka rule: link se khud join hota hai. Jobs sirf group members ko milti hain.</p>
+ <a href="https://chat.whatsapp.com/FC6wOs3y3ZG9823dKK1bd4" style="display:block;text-align:center;padding:14px;border-radius:10px;background:linear-gradient(135deg,#25d366,#1ebe57);color:#04331a;font-size:16px;font-weight:700;text-decoration:none">💬 Join the Jobs Group (Free)</a>
+ <p style="color:#64748b;font-size:12px;margin:12px 0 0">WhatsApp rule: members join by themselves via the link. Jobs are only sent to group members.</p>
 </div>
 
 <script>
@@ -134,7 +134,7 @@ function joinNow(){
  var t=encodeURIComponent(document.title+' — Expert Plumbing, Fast Response: '+location.href);
  var d=document.createElement('div');
  d.style.cssText='position:fixed;bottom:14px;right:14px;z-index:9990;display:flex;gap:8px';
- d.innerHTML='<a href="https://wa.me/?text='+t+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="WhatsApp par share karein">&#128172;</a><a href="https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#1877f2;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Facebook par share karein">f</a>';
+ d.innerHTML='<a href="https://wa.me/?text='+t+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on WhatsApp">&#128172;</a><a href="https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#1877f2;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on Facebook">f</a>';
  document.body.appendChild(d);
 })();
 </script>

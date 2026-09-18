@@ -51,20 +51,20 @@
 <div class="wrap">
   <a class="back" href="index.html">&larr; ZH Plumbing Service</a>
   <h1>Find Plumbers Near Me</h1>
-  <p class="sub">Apni location allow karein — aas paas ke verified plumbing partners foran dikh jayenge. Duniya mein kahin bhi kaam karta hai.</p>
+  <p class="sub">Allow your location and instantly see verified plumbing partners near you — works anywhere in the world.</p>
 
   <div class="card">
     <button class="btn-loc" onclick="findNearMe()">📍 Use My Location</button>
-    <p class="hint">Browser se location permission mangega — sirf plumbing search ke liye use hoti hai.</p>
+    <p class="hint">Your browser will ask for location permission — used only for this search.</p>
     <div id="status"></div>
   </div>
 
   <div class="card" id="results" style="display:none">
-    <h2 style="font-family:'Oswald',sans-serif;font-size:20px;margin:0 0 6px;color:#fff">Aap ke qareeb ke plumbers</h2>
+    <h2 style="font-family:'Oswald',sans-serif;font-size:20px;margin:0 0 6px;color:#fff">Plumbers near you</h2>
     <div id="list"></div>
   </div>
 
-  <p class="foot-note">ZH Plumbers Network — quotes on contact. Koi fixed rate nahi. Verified partners only.</p>
+  <p class="foot-note">ZH Plumbers Network — quotes on contact. No fixed rates. Verified partners only.</p>
 </div>
 
 <script>
@@ -75,14 +75,14 @@ function setStatus(cls, msg) {
   s.textContent = msg;
 }
 function waLink(name, km) {
-  var txt = 'Assalam o Alaikum! Mujhe "' + name + '" (approx ' + km + ' km) ke zariye plumbing service chahiye. ZH Plumbers Network se contact kar raha hoon.';
+  var txt = 'Hello! I found "' + name + '" (approx ' + km + ' km away) on the ZH Plumbers Network and would like a plumbing service quote.';
   return 'https://wa.me/923705840165?text=' + encodeURIComponent(txt);
 }
 function render(data) {
   var list = document.getElementById('list');
   document.getElementById('results').style.display = 'block';
   if (!data.plumbers || data.plumbers.length === 0) {
-    list.innerHTML = '<p class="empty">Is location ke 15 km mein abhi koi partner listed nahi — magar network roz grow ho raha hai. Seedha WhatsApp karein, hum dekh lete hain.</p><a class="btn-wa" href="' + waLink('ZH dispatch', 0) + '">💬 WhatsApp Karein</a>';
+    list.innerHTML = '<p class="empty">No partners listed within 15 km of this location yet — but the network is growing daily. Message us on WhatsApp and we'll take care of it.</p><a class="btn-wa" href="' + waLink('ZH dispatch', 0) + '">💬 Message Us on WhatsApp</a>';
     return;
   }
   list.innerHTML = data.plumbers.map(function (p) {
@@ -92,25 +92,25 @@ function render(data) {
     return '<div class="plumber"><p class="p-name">' + p.name + '</p>' +
       '<p class="p-meta">' + meta + '</p>' +
       '<span class="p-dist">📍 ' + p.distance_km + ' km away</span><br>' +
-      '<a class="btn-wa" href="' + waLink(p.name, p.distance_km) + '">💬 Is plumber se quote lein</a></div>';
+      '<a class="btn-wa" href="' + waLink(p.name, p.distance_km) + '">💬 Get a quote from this plumber</a></div>';
   }).join('');
 }
 function search(lat, lng) {
-  setStatus('busy', '🔍 Aas paas ke plumbers dhoond rahe hain...');
+  setStatus('busy', '🔍 Searching for plumbers near you...');
   fetch('https://superagent-f5d1d063.base44.app/functions/findPlumbersNearMe?lat=' + lat + '&lng=' + lng + '&radius=15')
     .then(function (r) { return r.json(); })
     .then(function (d) {
-      if (d.ok) { setStatus('ok', '✅ ' + d.count + ' partner' + (d.count === 1 ? '' : 's') + ' mile aap ke 15 km mein.'); render(d); }
-      else setStatus('bad', '⚠️ ' + (d.error || 'Search fail ho gayi — dobara try karein.'));
+      if (d.ok) { setStatus('ok', '✅ ' + d.count + ' partner' + (d.count === 1 ? '' : 's') + ' found within 15 km.'); render(d); }
+      else setStatus('bad', '⚠️ ' + (d.error || 'Search failed — please try again.'));
     })
-    .catch(function () { setStatus('bad', '⚠️ Network error — dobara try karein.'); });
+    .catch(function () { setStatus('bad', '⚠️ Network error — please try again.'); });
 }
 function findNearMe() {
-  if (!navigator.geolocation) { setStatus('bad', '⚠️ Aap ke browser mein location support nahi.'); return; }
-  setStatus('busy', '📡 Location le rahe hain...');
+  if (!navigator.geolocation) { setStatus('bad', '⚠️ Location is not supported by your browser.'); return; }
+  setStatus('busy', '📡 Getting your location...');
   navigator.geolocation.getCurrentPosition(
     function (pos) { search(pos.coords.latitude, pos.coords.longitude); },
-    function () { setStatus('bad', '⚠️ Location permission nahi mili. Permission allow kar ke dobara try karein.'); },
+    function () { setStatus('bad', '⚠️ Location permission denied. Please allow access and try again.'); },
     { enableHighAccuracy: true, timeout: 10000 }
   );
 }
@@ -120,7 +120,7 @@ function findNearMe() {
  var t=encodeURIComponent(document.title+' — Expert Plumbing, Fast Response: '+location.href);
  var d=document.createElement('div');
  d.style.cssText='position:fixed;bottom:14px;right:14px;z-index:9990;display:flex;gap:8px';
- d.innerHTML='<a href="https://wa.me/?text='+t+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="WhatsApp par share karein">&#128172;</a><a href="https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#1877f2;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Facebook par share karein">f</a>';
+ d.innerHTML='<a href="https://wa.me/?text='+t+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on WhatsApp">&#128172;</a><a href="https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#1877f2;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on Facebook">f</a>';
  document.body.appendChild(d);
 })();
 </script>
