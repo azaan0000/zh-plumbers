@@ -47,10 +47,10 @@
 <body>
 <div class="card">
  <h1><img src="assets/logo.png" alt="ZH logo" style="width:44px;height:44px;border-radius:10px;vertical-align:middle"> Plumbers — Join ZH Network</h1>
- <p class="sub">Get plumbing jobs directly in your area. Registration is <b>100% free</b>.</p>
+ <p class="sub">Get plumbing jobs directly in your area. <b>Registration is 100% free.</b></p>
 
  <div class="benefit"><h3>📲 Jobs Come to You</h3><p>Whenever a client needs plumbing work in your area, we send you the details — client info and job description, all ready.</p></div>
- <div class="benefit"><h3>💰 Payment 100% Yours</h3><p>You agree the rate with the client; we keep a small network fee (15-20%) only on jobs we bring you — the rest goes straight to you. Rate aap khud set karte hain.</p></div>
+ <div class="benefit"><h3>💰 Payment 100% Yours</h3><p>You agree the rate with the client; we keep a small network fee (15-20%) only on jobs we bring you — <b>the rest goes straight to you.</b> Rate aap khud set karte hain.</p></div>
  <div class="benefit"><h3>⚡ No Registration Fee</h3><p>No monthly charge, no signup fee. You only pay a fee on the jobs we bring you.</p></div>
  <div class="benefit"><h3>📍 Our Areas</h3><p>Gujjar Khan, Rawalpindi (Satellite Town, Bahria Town, DHA, Murree Road...), Islamabad, Taxila, Wah Cantt, Kahuta and nearby areas — with new cities being added worldwide.</p></div>
 
@@ -82,13 +82,13 @@
 <script>
 function useLocation(){
   var out=document.getElementById('p-result');
-  out.style.display='block'; out.className='result ok'; out.textContent='Getting your location...';
-  if(!navigator.geolocation){out.className='result bad';out.textContent='Location is not available on this device.';return;}
+  out.style.display='block'; out.className='result ok'; out.textContent=zhT('Getting your location...');
+  if(!navigator.geolocation){out.className='result bad';out.textContent=zhT('Location is not available on this device.');return;}
   navigator.geolocation.getCurrentPosition(function(pos){
     document.getElementById('p-lat').value=pos.coords.latitude.toFixed(6);
     document.getElementById('p-lng').value=pos.coords.longitude.toFixed(6);
-    out.textContent='✓ Location added.';
-  },function(){out.className='result bad';out.textContent='Location permission denied — you can fill the fields manually.';});
+    out.textContent=zhT('✓ Location added.');
+  },function(){out.className='result bad';out.textContent=zhT('Location permission denied — you can fill the fields manually.');});
 }
 
 function joinNow(){
@@ -103,16 +103,16 @@ function joinNow(){
   var experience=document.getElementById('p-exp').value.trim();
   var out=document.getElementById('p-result');
   out.style.display='block';
-  if(!name||!phone||!country||!city){out.className='result bad';out.textContent='Name, phone, country and city are required.';return;}
-  out.className='result ok';out.textContent='Submitting...';
+  if(!name||!phone||!country||!city){out.className='result bad';out.textContent=zhT('Name, phone, country and city are required.');return;}
+  out.className='result ok';out.textContent=zhT('Submitting...');
   fetch('https://superagent-f5d1d063.base44.app/functions/createPlumberPartner',{
     method:'POST',headers:{'Content-Type':'application/json'},
     body:JSON.stringify({name:name,phone:phone,country:country,city:city,latitude:isFinite(latitude)?latitude:null,longitude:isFinite(longitude)?longitude:null,areas:areas,services:services,experience:experience})
   }).then(function(r){return r.json();}).then(function(d){
-    if(d.ok){out.className='result ok';out.textContent='✓ Registered! The ZH Plumbers team will contact you and explain how the network works.';
+    if(d.ok){out.className='result ok';out.textContent=zhT('✓ Registered! The ZH Plumbers team will contact you and explain how the network works.');
       document.getElementById('p-name').value='';document.getElementById('p-phone').value='';document.getElementById('p-areas').value='';}
     else{out.className='result bad';out.textContent=d.error||'Something went wrong — please contact us on WhatsApp.';}
-  }).catch(function(){out.className='result bad';out.textContent='Network error — please try again.';});
+  }).catch(function(){out.className='result bad';out.textContent=zhT('Network error — please try again.');});
 }
 </script>
 
@@ -134,10 +134,13 @@ function joinNow(){
  var t=encodeURIComponent(document.title+' — Expert Plumbing, Fast Response: '+location.href);
  var d=document.createElement('div');
  d.style.cssText='position:fixed;bottom:14px;right:14px;z-index:9990;display:flex;gap:8px';
- d.innerHTML='<a href="https://wa.me/?text='+t+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on WhatsApp">&#128172;</a><a href="https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#1877f2;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on Facebook">f</a>';
+ d.innerHTML=zhT('<a href="https://wa.me/?text=')+t+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on WhatsApp">&#128172;</a><a href="https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#1877f2;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on Facebook">f</a>';
  document.body.appendChild(d);
 })();
 </script>
+<script src="assets/dict-a.js"></script>
+<script src="assets/dict-b.js"></script>
+<script src="assets/dict-c.js"></script>
 <script src="assets/lang.js"></script>
 </body>
 </html>

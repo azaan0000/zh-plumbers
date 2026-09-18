@@ -99,7 +99,7 @@ function render(data) {
   var list = document.getElementById('list');
   document.getElementById('results').style.display = 'block';
   if (!data.plumbers || data.plumbers.length === 0) {
-    list.innerHTML = '<p class="empty">No partners listed for this location yet — but the network is growing daily. Message us on WhatsApp and we will take care of it.</p><a class="btn-wa" href="' + waLink('ZH dispatch', 0) + '">💬 Message Us on WhatsApp</a>';
+    list.innerHTML = zhT('<p class="empty">No partners listed for this location yet — but the network is growing daily. Message us on WhatsApp and we will take care of it.</p><a class="btn-wa" href="') + waLink('ZH dispatch', 0) + '">💬 Message Us on WhatsApp</a>';
     return;
   }
   list.innerHTML = data.plumbers.map(function (p) {
@@ -154,6 +154,9 @@ function findNearMe() {
   );
 }
 </script>
+<script src="assets/dict-a.js"></script>
+<script src="assets/dict-b.js"></script>
+<script src="assets/dict-c.js"></script>
 <script src="assets/lang.js"></script>
 </body>
 </html>

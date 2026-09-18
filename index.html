@@ -897,30 +897,30 @@ function submitLead(){
   var details = document.getElementById('lead-details').value.trim();
   var out = document.getElementById('lead-result');
   out.style.display='block';
-  if(!name || !phone){ out.innerHTML='<span style="color:#c00">Naam aur phone number zaroori hai.</span>'; return; }
-  out.innerHTML='Bhej rahe hain...';
+  if(!name || !phone){ out.innerHTML=zhT('<span style="color:#c00">Naam aur phone number zaroori hai.</span>'); return; }
+  out.innerHTML=zhT('Bhej rahe hain...');
   fetch('https://superagent-f5d1d063.base44.app/functions/createLead', {
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body: JSON.stringify({name:name, phone:phone, area:area, service:service, details:details, source:'website_form'})
   }).then(function(r){ return r.json(); }).then(function(d){
-    if(d.ok){ out.innerHTML='<span style="color:#0a7a3d;font-weight:700">✓ Ho gaya! ZH Plumbing team 2 ghante ke andar aap se rabta karegi. Emergency ho to abhi call karein: <a href="tel:03705840165" style="color:var(--accent);font-weight:700">0370-5840165</a></span>';
+    if(d.ok){ out.innerHTML=zhT('<span style="color:#0a7a3d;font-weight:700">✓ Ho gaya! ZH Plumbing team 2 ghante ke andar aap se rabta karegi. Emergency ho to abhi call karein: <a href="tel:03705840165" style="color:var(--accent);font-weight:700">0370-5840165</a></span>');
       document.getElementById('lead-name').value=''; document.getElementById('lead-phone').value=''; document.getElementById('lead-details').value='';
-    } else { out.innerHTML='<span style="color:#c00">'+(d.error||'Masla aaya — WhatsApp par rabta karein.')+'</span>'; }
+    } else { out.innerHTML=zhT('<span style="color:#c00">')+(d.error||'Masla aaya — WhatsApp par rabta karein.')+'</span>'; }
   }).catch(function(){
-    out.innerHTML='<span style="color:#c00">Internet masla — dobara koshish karein ya <a href="https://wa.me/923705840165" style="color:var(--accent)">WhatsApp karein</a>.</span>';
+    out.innerHTML=zhT('<span style="color:#c00">Internet masla — dobara koshish karein ya <a href="https://wa.me/923705840165" style="color:var(--accent)">WhatsApp karein</a>.</span>');
   });
 }
 function checkArea(){
   var q=document.getElementById('area-input').value.trim().toLowerCase();
   var out=document.getElementById('area-result');
-  if(!q){out.innerHTML='Area ka naam likhein — jaise <b>Bahria Town Phase 4</b> ya <b>Gujjar Khan</b>';out.style.display='block';return}
+  if(!q){out.innerHTML=zhT('Area ka naam likhein — jaise <b>Bahria Town Phase 4</b> ya <b>Gujjar Khan</b>');out.style.display='block';return}
   var hit=null;
   for(var k in AREA_DB){ if(q.indexOf(k)!==-1){hit=AREA_DB[k];break} }
   if(hit&&hit!=='no'){
-    out.innerHTML='<div style="font-weight:800;color:var(--success);font-size:16px">✅ Ji haan — hum aap ke ilaqay mein service dete hain!</div><div style="margin-top:6px">📍 '+hit[0]+' — average response time: <b>'+hit[1]+' minute</b></div><a class="btn-wa-mini" href="https://wa.me/923705840165?text='+encodeURIComponent('Assalam o Alaikum! Mujhe '+hit[0]+' mein plumbing service chahiye.')+'">💬 Abhi Book Karein</a>';
+    out.innerHTML=zhT('<div style="font-weight:800;color:var(--success);font-size:16px">✅ Ji haan — hum aap ke ilaqay mein service dete hain!</div><div style="margin-top:6px">📍 ')+hit[0]+' — average response time: <b>'+hit[1]+' minute</b></div><a class="btn-wa-mini" href="https://wa.me/923705840165?text='+encodeURIComponent('Assalam o Alaikum! Mujhe '+hit[0]+' mein plumbing service chahiye.')+'">💬 Abhi Book Karein</a>';
   } else {
-    out.innerHTML='<div style="font-weight:800;font-size:16px">🤔 Ye area confirm nahi ho saka — magar hum call par 1 minute mein confirm kar dete hain.</div><a class="btn-wa-mini" style="background:var(--accent)" href="https://wa.me/923705840165?text='+encodeURIComponent('Assalam o Alaikum! Kya aap "'+document.getElementById('area-input').value+'" mein plumbing service dete hain?')+'">💬 WhatsApp Par Poochein</a><p class="tool-note">Gujjar Khan se Kahuta tak aas paas ke tamam ilaqay covered hain.</p>';
+    out.innerHTML=zhT('<div style="font-weight:800;font-size:16px">🤔 Ye area confirm nahi ho saka — magar hum call par 1 minute mein confirm kar dete hain.</div><a class="btn-wa-mini" style="background:var(--accent)" href="https://wa.me/923705840165?text=')+encodeURIComponent('Assalam o Alaikum! Kya aap "'+document.getElementById('area-input').value+'" mein plumbing service dete hain?')+'">💬 WhatsApp Par Poochein</a><p class="tool-note">Gujjar Khan se Kahuta tak aas paas ke tamam ilaqay covered hain.</p>';
   }
   out.style.display='block';
 }
@@ -931,10 +931,13 @@ function checkArea(){
  var t=encodeURIComponent(document.title+' — Expert Plumbing, Fast Response: '+location.href);
  var d=document.createElement('div');
  d.style.cssText='position:fixed;bottom:14px;right:14px;z-index:9990;display:flex;gap:8px';
- d.innerHTML='<a href="https://wa.me/?text='+t+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on WhatsApp">&#128172;</a><a href="https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#1877f2;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on Facebook">f</a>';
+ d.innerHTML=zhT('<a href="https://wa.me/?text=')+t+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on WhatsApp">&#128172;</a><a href="https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)+'" target="_blank" rel="noopener" style="width:46px;height:46px;border-radius:50%;background:#1877f2;color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4)" title="Share on Facebook">f</a>';
  document.body.appendChild(d);
 })();
 </script>
+<script src="assets/dict-a.js"></script>
+<script src="assets/dict-b.js"></script>
+<script src="assets/dict-c.js"></script>
 <script src="assets/lang.js"></script>
 </body>
 </html>
