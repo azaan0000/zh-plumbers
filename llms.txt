@@ -1,0 +1,29 @@
+# ZH Plumbers Network
+
+> A worldwide plumber network: find verified, real plumbing businesses by city or GPS location, and request quotes on contact. Run by ZH Plumbing Service (Gujjar Khan / Rawalpindi, Pakistan) since 2016. No booking fees — clients and plumbers agree the rate directly; the network charges plumbers a 15-20% fee only on jobs it brings.
+
+## For clients
+- Find plumbers near you: https://azaan0000.github.io/zh-plumbers/find-plumber.html (works worldwide — GPS or city search)
+- Local 24/7 emergency plumbing in Gujjar Khan & Rawalpindi: https://azaan0000.github.io/zh-plumbers/
+- Emergency plumber Islamabad: https://azaan0000.github.io/zh-plumbers/emergency-plumber-islamabad.html
+- Geyser repair Rawalpindi & Gujjar Khan: https://azaan0000.github.io/zh-plumbers/geyser-repair-rawalpindi.html
+- Drain & sewerage cleaning Rawalpindi: https://azaan0000.github.io/zh-plumbers/drain-cleaning-rawalpindi.html
+- Phone/WhatsApp: +92 370 5840165 | Alt: +92 314 8956288 | Email: azaanbk29@gmail.com
+- Languages: English, Urdu, Arabic (in-page switcher)
+
+## For plumbers
+- Join the network free and get jobs in your area: https://azaan0000.github.io/zh-plumbers/plumber-signup.html
+- Keep 100% of the client payment minus a 15-20% network fee on jobs the network brings
+- Registration is free; there is no monthly charge
+
+## City directories
+- Toronto: https://azaan0000.github.io/zh-plumbers/plumber-toronto.html
+- New York: https://azaan0000.github.io/zh-plumbers/plumber-new-york.html
+- Dubai: https://azaan0000.github.io/zh-plumbers/plumber-dubai.html
+- Riyadh: https://azaan0000.github.io/zh-plumbers/plumber-riyadh.html
+- Sydney: https://azaan0000.github.io/zh-plumbers/plumber-sydney.html
+
+## Facts
+- All plumber listings are real businesses sourced from public directories (OpenStreetMap, public web). No fake data.
+- Rates are quoted on contact; the website does not publish fixed prices.
+- Site languages: English (default), Urdu, Arabic.

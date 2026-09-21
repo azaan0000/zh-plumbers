@@ -38,3 +38,24 @@ window.ZH_T = Object.assign(window.ZH_T || {}, {
   "Ji haan — Gujjar Khan, Rawalpindi, Satellite Town, Bahria Town, Murree Road sab covered. 24/7 emergency blockage service available hai.": { en: "Yes — Gujjar Khan, Rawalpindi, Satellite Town, Bahria Town, Murree Road are all covered. 24/7 emergency blockage service is available.", ur: "جی ہاں — گجر خان، راولپنڈی، سیٹلائٹ ٹاؤن، بہریہ ٹاؤن، مری روڈ سب کور شد۔ 24/7 ایمرجنسی بلاج سروس دستیاب ہے۔", ar: "نعم — جوجر خان، راولبندي، ساتلايت تاون، بحرية تاون، طريق موري جميعها مشمولة. خدمة طوارئ للانسداد 24/7 متاحة." },
   "Rawalpindi mein drain blockage cleaning ki cost kitni hai?": { en: "What is the cost of drain blockage cleaning in Rawalpindi?", ur: "راولپنڈی میں ڈرین بلاج صفائی کی لاگت کتنی ہے؟", ar: "كم تكلفة تنظيف انسداد المصارف في راولبندي؟" }
 });
+
+
+/* part G: international city directory pages */
+window.ZH_T = Object.assign(window.ZH_T || {}, {
+  "Plumbers in Toronto": { ur: "ٹورنٹو میں پلمبھر", ar: "سباكون في تورونتو" },
+  "Plumbers in New York": { ur: "نیو یارک میں پلمبھر", ar: "سباكون في نيويورك" },
+  "Plumbers in Dubai": { ur: "دبئی میں پلمبھر", ar: "سباكون في دبي" },
+  "Plumbers in Riyadh": { ur: "ریاض میں پلمبھر", ar: "سباكون في الرياض" },
+  "Plumbers in Sydney": { ur: "سڈنی میں پلمبھر", ar: "سباكون في سيدني" },
+  "Verified plumbing businesses in": { ur: "میں تصدیق شدہ پلمبنگ کاروبار —", ar: "أعمال سباكة موثقة في" },
+  "Plumbers in Toronto — Verified Local Plumbers | ZH Plumbers Network": { ur: "ٹورنٹو میں پلمبھر — تصدیق شدہ مقامی پلمبھر | ZH پلمبھر نیٹ ورک", ar: "سباكون في تورونتو — سباكون محليون موثقون | شبكة ZH" },
+  "Plumbers in New York — Verified Local Plumbers | ZH Plumbers Network": { ur: "نیو یارک میں پلمبھر — تصدیق شدہ مقامی پلمبھر | ZH پلمبھر نیٹ ورک", ar: "سباكون في نيويورك — سباكون محليون موثقون | شبكة ZH" },
+  "Plumbers in Dubai — Verified Local Plumbers | ZH Plumbers Network": { ur: "دبئی میں پلمبھر — تصدیق شدہ مقامی پلمبھر | ZH پلمبھر نیٹ ورک", ar: "سباكون في دبي — سباكون محليون موثقون | شبكة ZH" },
+  "Plumbers in Riyadh — Verified Local Plumbers | ZH Plumbers Network": { ur: "ریاض میں پلمبھر — تصدیق شدہ مقامی پلمبھر | ZH پلمبھر نیٹ ورک", ar: "سباكون في الرياض — سباكون محليون موثقون | شبكة ZH" },
+  "Plumbers in Sydney — Verified Local Plumbers | ZH Plumbers Network": { ur: "سڈنی میں پلمبھر — تصدیق شدہ مقامی پلمبھر | ZH پلمبھر نیٹ ورک", ar: "سباكون في سيدني — سباكون محليون موثقون | شبكة ZH" },
+  "How do I get a plumber in": { ur: "میں پلمبھر کaise lein?", ar: "كيف أحصل على سباك في" },
+  "Request a plumber on WhatsApp": { ur: "واٹس ایپ پر پلمبھر کی درخواست کریں", ar: "اطلب سباكاً عبر واتساب" },
+  "Call now": { ur: "ابھی کال کریں", ar: "اتصل الآن" },
+  "How it works:": { ur: "طریقہ کار:", ar: "كيف يعمل:" },
+  "FAQ — Plumbers in": { ur: "اکثر سوالات — پلمبھر", ar: "الأسئلة الشائعة — سباكون في" }
+});
