@@ -59,3 +59,23 @@ window.ZH_T = Object.assign(window.ZH_T || {}, {
   "How it works:": { ur: "طریقہ کار:", ar: "كيف يعمل:" },
   "FAQ — Plumbers in": { ur: "اکثر سوالات — پلمبھر", ar: "الأسئلة الشائعة — سباكون في" }
 });
+
+/* part H: international banner + internal-link sections (homepage, find-plumber) */
+window.ZH_T = Object.assign(window.ZH_T || {}, {
+  "🌍 ZH Plumbers Network is now worldwide —": { en: "🌍 ZH Plumbers Network is now worldwide —", ur: "🌍 ZH پلمبھر نیٹ ورک اب دنیا بھر میں ہے —", ar: "🌍 شبكة ZH للسباكين أصبحت عالمية —" },
+  "Find Plumbers Near You": { en: "Find Plumbers Near You", ur: "اپنے قریب پلمبھر تلاش کریں", ar: "ابحث عن سباك قريب منك" },
+  "More Services & Cities": { en: "More Services & Cities", ur: "مزید سروسز اور شہر", ar: "خدمات ومدن أخرى" },
+  "Dedicated pages for specific services and worldwide cities": { en: "Dedicated pages for specific services and worldwide cities", ur: "مخصوص سروسز اور دنیا بھر کے شہروں کے لیے علیحدہ صفحات", ar: "صفحات مخصصة لخدمات محددة ومدن حول العالم" },
+  "Geyser Repair": { en: "Geyser Repair", ur: "گیسر مرمت", ar: "إصلاح السخان" },
+  "Geyser Repair in Rawalpindi & Gujjar Khan →": { en: "Geyser Repair in Rawalpindi & Gujjar Khan →", ur: "راولپنڈی اور گجر خان میں گیسر مرمت ←", ar: "إصلاح السخان في راولبندي وجوجر خان ←" },
+  "Drain Cleaning": { en: "Drain Cleaning", ur: "ڈرین صفائی", ar: "تنظيف المصارف" },
+  "Drain & Sewerage Cleaning in Rawalpindi →": { en: "Drain & Sewerage Cleaning in Rawalpindi →", ur: "راولپنڈی میں ڈرین اور سیوریج صفائی ←", ar: "تنظيف المصارف والمجاري في راولبندي ←" },
+  "Plumbers in Toronto →": { en: "Plumbers in Toronto →", ur: "ٹورنٹو میں پلمبھر ←", ar: "سباكون في تورونتو ←" },
+  "Plumbers in New York →": { en: "Plumbers in New York →", ur: "نیو یارک میں پلمبھر ←", ar: "سباكون في نيويورك ←" },
+  "Plumbers in Dubai →": { en: "Plumbers in Dubai →", ur: "دبئی میں پلمبھر ←", ar: "سباكون في دبي ←" },
+  "Plumbers in Riyadh →": { en: "Plumbers in Riyadh →", ur: "ریاض میں پلمبھر ←", ar: "سباكون في الرياض ←" },
+  "Plumbers in Sydney →": { en: "Plumbers in Sydney →", ur: "سڈنی میں پلمبھر ←", ar: "سباكون في سيدني ←" },
+  "Find Anywhere": { en: "Find Anywhere", ur: "کہیں بھی تلاش کریں", ar: "البحث في أي مكان" },
+  "Find Plumbers Near Me (Worldwide) →": { en: "Find Plumbers Near Me (Worldwide) →", ur: "میرے قریب پلمبھر تلاش کریں (دنیا بھر میں) ←", ar: "ابحث عن سباك قريب (حول العالم) ←" },
+  "Popular cities:": { en: "Popular cities:", ur: "مشہور شہر:", ar: "المدن الشائعة:" }
+});
