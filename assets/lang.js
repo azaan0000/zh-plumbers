@@ -4,7 +4,7 @@
   var T = window.ZH_T || {};
 
   function getLang() {
-    try { return localStorage.getItem('zhlang') || SRC; } catch (e) { return SRC; }
+    try { return localStorage.getItem('zhlang') || 'en'; } catch (e) { return 'en'; }
   }
 
   function tr(s, lang) {
@@ -88,7 +88,7 @@
     var current = getLang();
     var bar = document.createElement('div');
     bar.style.cssText = 'position:fixed;bottom:14px;left:14px;z-index:9990;display:flex;gap:6px;padding:5px;background:rgba(15,23,42,.75);border:1px solid #334155;border-radius:30px;backdrop-filter:blur(6px)';
-    var opts = [['src', 'EN / اردو'], ['en', 'English'], ['ur', 'اردو'], ['ar', 'عربي']];
+    var opts = [['src', 'Roman Urdu'], ['en', 'English'], ['ur', 'اردو'], ['ar', 'عربي']];
     opts.forEach(function (o) {
       var b = document.createElement('button');
       b.className = 'zh-lang-btn';
