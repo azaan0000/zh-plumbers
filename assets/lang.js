@@ -84,21 +84,32 @@
   }
   window.zhSetLang = setLang;
 
-  function initSwitcher() {
-    var current = getLang();
+  function buildSwitcher(parent) {
     var bar = document.createElement('div');
-    bar.style.cssText = 'position:fixed;bottom:14px;left:14px;z-index:9990;display:flex;gap:6px;padding:5px;background:rgba(15,23,42,.75);border:1px solid #334155;border-radius:30px;backdrop-filter:blur(6px)';
-    var opts = [['src', 'Roman Urdu'], ['en', 'English'], ['ur', 'اردو'], ['ar', 'عربي']];
+    bar.className = 'zh-lang';
+    var opts = [['en', 'EN'], ['src', 'Roman'], ['ur', 'اردو'], ['ar', 'عربي']];
     opts.forEach(function (o) {
       var b = document.createElement('button');
       b.className = 'zh-lang-btn';
       b.setAttribute('data-lang', o[0]);
+      b.type = 'button';
       b.textContent = o[1];
-      b.style.cssText = 'border:none;padding:6px 12px;border-radius:20px;font-size:12.5px;font-weight:700;cursor:pointer;font-family:inherit;background:rgba(30,41,59,.9);color:#cbd5e1';
       b.onclick = function () { setLang(o[0]); };
       bar.appendChild(b);
     });
-    document.body.appendChild(bar);
+    parent.appendChild(bar);
+    return bar;
+  }
+
+  function initSwitcher() {
+    var current = getLang();
+    var nav = document.querySelector('header .nav-wrapper') || document.querySelector('header');
+    if (nav) buildSwitcher(nav);
+    else {
+      var fl = buildSwitcher(document.createElement('div'));
+      fl.classList.add('zh-lang-float');
+      document.body.appendChild(fl);
+    }
     setLang(current);
   }
 

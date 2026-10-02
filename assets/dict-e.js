@@ -113,3 +113,10 @@ window.ZH_T = Object.assign(window.ZH_T || {}, {
   "Search Worldwide": { en: "Search Worldwide", ur: "دنیا بھر میں تلاش", ar: "بحث عالمي" },
   "A worldwide plumber network connecting clients with real local professionals. Our original ZH Plumbing Service hub continues to serve Pakistan locally.": { en: "A worldwide plumber network connecting clients with real local professionals. Our original ZH Plumbing Service hub continues to serve Pakistan locally.", ur: "دنیا بھر کا پلمبھر نیٹ ورک جو کلائنٹس کو حقیقی مقامی پروفیشنلز سے جوڑتا ہے۔ ہمارا اصل ZH پلمبنگ سروس مرکز پاکستان میں مقامی سروس جاری رکھتا ہے۔", ar: "شبكة سباكين عالمية تربط العملاء بمتخصصين محليين حقيقيين. يواصل مركز ZH الأصلي تقديم الخدمة المحلية في باكستان." }
 });
+
+
+/* part J: top language switcher + AEO quick answer */
+window.ZH_T = Object.assign(window.ZH_T || {}, {
+  "Jawab seedha:": { en: "Quick answer:", ur: "جواب سیدھا:", ar: "الإجابة مباشرة:" },
+  "ZH Plumbers Network aap ko duniya bhar ke real local plumbers se milata hai. Apna city likhein ya GPS use karein (Find Plumbers page), direct quote request karein aur rate plumber ke sath tay karein. Pakistan hub (Gujjar Khan/Rawalpindi) mein emergency response 30-40 minute, 24/7.": { en: "ZH Plumbers Network connects you with real local plumbers worldwide. Enter your city or use GPS on the Find Plumbers page, request a quote directly, and agree the rate with the plumber. Emergency response in our Pakistan hub (Gujjar Khan/Rawalpindi) is 30-40 minutes, 24/7.", ur: "ZH پلمبھر نیٹ ورک آپ کو دنیا بھر کے حقیقی مقامی پلمبرز سے ملاتا ہے۔ اپنا شہر لکھیں یا GPS استعمال کریں، براہ راستہ کوٹیشن لیں اور ریٹ پلمبر کے ساتھ طے کریں۔ پاکستان مرکز میں emergency response 30-40 منٹ، 24/7۔", ar: "تربطك شبكة ZH بالسباکين المحليين الحقيقيين حول العالم۔ أدخل مدينتك أو استخدم GPS، اطلب عرض سعر مباشرة، واتفق على السعر مع السباک۔ استجابة الطارئة في مركزنا في باكستان 30-40 دقيقة، 24/7۔" }
+});

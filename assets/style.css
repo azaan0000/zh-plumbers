@@ -256,3 +256,11 @@ body{padding-bottom:58px}
 .city-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px}
 .city-links a{background:white;border:1px solid var(--border);padding:8px 16px;border-radius:20px;text-decoration:none;font-size:13px;font-weight:600;color:var(--primary)}
 .city-links a:hover{background:var(--light)}
+
+
+/* language switcher - top placement */
+.zh-lang{display:flex;gap:4px;align-items:center;margin-left:10px;flex-shrink:0}
+.zh-lang-btn{border:none;padding:5px 10px;border-radius:16px;font-size:11.5px;font-weight:700;cursor:pointer;font-family:inherit;background:rgba(30,41,59,.9);color:#cbd5e1;white-space:nowrap}
+.zh-lang-btn:hover{color:#fff}
+.zh-lang-float{position:fixed;top:14px;right:14px;z-index:9990;background:rgba(15,23,42,.75);padding:5px;border:1px solid #334155;border-radius:30px;backdrop-filter:blur(6px);margin:0}
+@media(max-width:768px){.nav-wrapper{flex-wrap:wrap}.nav-wrapper .zh-lang{order:5;flex-basis:100%;justify-content:center;margin:6px 0 10px}}
