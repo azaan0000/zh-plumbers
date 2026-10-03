@@ -78,8 +78,10 @@
     applyLang(lang);
     document.querySelectorAll('.zh-lang-btn').forEach(function (b) {
       var on = b.getAttribute('data-lang') === lang;
-      b.style.background = on ? '#38bdf8' : 'rgba(30,41,59,.9)';
-      b.style.color = on ? '#0c2434' : '#cbd5e1';
+      b.style.background = on ? 'linear-gradient(135deg,#f97316,#fb923c)' : 'transparent';
+      b.style.color = on ? '#ffffff' : '#cbd5e1';
+      b.style.boxShadow = on ? '0 4px 16px rgba(249,115,22,.45)' : 'none';
+      b.style.fontWeight = on ? '700' : '600';
     });
   }
   window.zhSetLang = setLang;
