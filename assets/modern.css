@@ -1,0 +1,58 @@
+/* ZH Plumbers - shared modern UI layer (loaded by ALL pages; overrides inline styles) */
+/* language switcher - compact modern dropdown (header) */
+.zh-lang-compact{position:relative;flex-shrink:0;margin-left:12px}
+.zh-lang-toggle{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#e2e8f0;padding:7px 13px;border-radius:22px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:all .25s ease;white-space:nowrap}
+.zh-lang-toggle:hover{background:rgba(255,255,255,.16);color:#fff}
+.zh-globe{font-size:13px;line-height:1}
+.zh-caret{font-size:9px;opacity:.75;transition:transform .25s ease}
+.zh-lang-compact.zh-open .zh-caret{transform:rotate(180deg)}
+.zh-lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(15,23,42,.97);border:1px solid rgba(148,163,184,.28);border-radius:14px;padding:6px;min-width:132px;display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;box-shadow:0 18px 44px rgba(0,0,0,.4);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);z-index:10002}
+.zh-lang-compact.zh-open .zh-lang-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.zh-lang-menu .zh-lang-btn{text-align:left;border:none;border-radius:10px;padding:9px 13px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;background:transparent;color:#cbd5e1;transition:all .2s ease;display:block;width:100%}
+.zh-lang-menu .zh-lang-btn:hover{background:rgba(255,255,255,.1);color:#fff}
+/* full row variant (mobile menu) */
+.zh-lang{display:flex;gap:2px;padding:3px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:26px;flex-wrap:wrap}
+.zh-lang .zh-lang-btn{border:none;padding:7px 12px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;background:transparent;color:#cbd5e1;transition:all .25s ease;white-space:nowrap}
+.zh-lang .zh-lang-btn:hover{color:#fff;background:rgba(255,255,255,.12)}
+.zh-lang-float{position:fixed;top:14px;right:14px;z-index:9990;margin:0}
+.mobile-menu .zh-lang{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:8px}
+
+/* ================= MODERN DESIGN LAYER (Oct 3, 2026) ================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+html{scroll-behavior:smooth}
+body{font-family:'Inter','Nunito',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+
+/* glass sticky header */
+header{background:rgba(11,28,49,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:box-shadow .3s ease}
+
+/* buttons: gradient + micro-interactions */
+.btn-primary{background:linear-gradient(135deg,#f97316,#fb923c)!important;box-shadow:0 6px 22px rgba(249,115,22,.42)!important;border-radius:12px!important;transition:all .3s ease!important}
+.btn-primary:hover{transform:translateY(-3px)!important;box-shadow:0 14px 34px rgba(249,115,22,.55)!important}
+.btn-secondary{border-radius:12px!important;transition:all .3s ease!important;border:1.5px solid rgba(255,255,255,.3)!important}
+.btn-secondary:hover{transform:translateY(-3px)!important;background:rgba(255,255,255,.14)!important}
+
+/* cards: lift on hover */
+.svc-box,.area-card,.stat-box,.faq-item,.review-card{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.svc-box:hover,.area-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,8,23,.18)}
+.faq-item:hover{box-shadow:0 12px 30px rgba(2,8,23,.12)}
+.svc-box{border-radius:18px}
+.faq-item{border-radius:14px;overflow:hidden}
+
+/* gradient accent line + gradient stat numbers */
+.accent-line{background:linear-gradient(90deg,#f97316,#38bdf8)!important;height:4px;border-radius:4px}
+.stat-num{background:linear-gradient(135deg,#fdba74,#f97316);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* hero: soft animated glow orbs */
+#home::before{content:'';position:absolute;width:420px;height:420px;top:-120px;right:-80px;background:radial-gradient(circle,rgba(249,115,22,.22),transparent 65%);pointer-events:none;animation:zhFloat 9s ease-in-out infinite alternate;z-index:1}
+#home::after{content:'';position:absolute;width:480px;height:480px;bottom:-160px;left:-100px;background:radial-gradient(circle,rgba(56,189,248,.16),transparent 65%);pointer-events:none;animation:zhFloat 11s ease-in-out infinite alternate-reverse;z-index:1}
+@keyframes zhFloat{from{transform:translate(0,0) scale(1)}to{transform:translate(-30px,26px) scale(1.1)}}
+
+/* scroll reveal */
+.zh-reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.zh-reveal.zh-on{opacity:1;transform:none}
+
+/* back-to-top */
+.zh-top{position:fixed;bottom:22px;right:20px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#f97316,#fb923c);color:#fff;font-size:20px;font-weight:700;border:none;box-shadow:0 8px 24px rgba(249,115,22,.45);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease;z-index:9980}
+.zh-top.zh-show{opacity:1;pointer-events:auto}
+.zh-top:hover{transform:translateY(-4px)}
