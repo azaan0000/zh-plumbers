@@ -258,13 +258,23 @@ body{padding-bottom:58px}
 .city-links a:hover{background:var(--light)}
 
 
-/* language switcher - modern segmented pill */
-.zh-lang{display:flex;gap:2px;margin-left:14px;padding:3px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:30px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);flex-shrink:0}
-.zh-lang-btn{border:none;padding:6px 13px;border-radius:22px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;background:transparent;color:#cbd5e1;transition:all .25s ease;white-space:nowrap}
-.zh-lang-btn:hover{color:#fff;background:rgba(255,255,255,.12)}
-.zh-lang-float{position:fixed;top:14px;right:14px;z-index:9990;background:rgba(15,23,42,.75);border:1px solid rgba(148,163,184,.25);border-radius:30px;backdrop-filter:blur(10px);margin:0}
-.mobile-menu .zh-lang{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08)}
-@media(max-width:768px){.nav-wrapper{flex-wrap:wrap}.nav-wrapper .zh-lang{order:5;flex-basis:100%;justify-content:center;margin:6px 0 8px}}
+/* language switcher - compact modern dropdown (header) */
+.zh-lang-compact{position:relative;flex-shrink:0;margin-left:12px}
+.zh-lang-toggle{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#e2e8f0;padding:7px 13px;border-radius:22px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:all .25s ease;white-space:nowrap}
+.zh-lang-toggle:hover{background:rgba(255,255,255,.16);color:#fff}
+.zh-globe{font-size:13px;line-height:1}
+.zh-caret{font-size:9px;opacity:.75;transition:transform .25s ease}
+.zh-lang-compact.zh-open .zh-caret{transform:rotate(180deg)}
+.zh-lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(15,23,42,.97);border:1px solid rgba(148,163,184,.28);border-radius:14px;padding:6px;min-width:132px;display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;box-shadow:0 18px 44px rgba(0,0,0,.4);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);z-index:10002}
+.zh-lang-compact.zh-open .zh-lang-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.zh-lang-menu .zh-lang-btn{text-align:left;border:none;border-radius:10px;padding:9px 13px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;background:transparent;color:#cbd5e1;transition:all .2s ease;display:block;width:100%}
+.zh-lang-menu .zh-lang-btn:hover{background:rgba(255,255,255,.1);color:#fff}
+/* full row variant (mobile menu) */
+.zh-lang{display:flex;gap:2px;padding:3px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:26px;flex-wrap:wrap}
+.zh-lang .zh-lang-btn{border:none;padding:7px 12px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;background:transparent;color:#cbd5e1;transition:all .25s ease;white-space:nowrap}
+.zh-lang .zh-lang-btn:hover{color:#fff;background:rgba(255,255,255,.12)}
+.zh-lang-float{position:fixed;top:14px;right:14px;z-index:9990;margin:0}
+.mobile-menu .zh-lang{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:8px}
 
 /* ================= MODERN DESIGN LAYER (Oct 3, 2026) ================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');

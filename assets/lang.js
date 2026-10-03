@@ -83,35 +83,71 @@
       b.style.boxShadow = on ? '0 4px 16px rgba(249,115,22,.45)' : 'none';
       b.style.fontWeight = on ? '700' : '600';
     });
+    document.querySelectorAll('.zh-cur').forEach(function (el) {
+      el.textContent = ZH_LABELS[lang] || 'EN';
+    });
   }
   window.zhSetLang = setLang;
 
-  function buildSwitcher(parent) {
-    var bar = document.createElement('div');
-    bar.className = 'zh-lang';
-    var opts = [['en', 'EN'], ['src', 'Roman'], ['ur', 'اردو'], ['ar', 'عربي']];
-    opts.forEach(function (o) {
+  var ZH_LABELS = { en: 'EN', src: 'Roman', ur: '\u0627\u0631\u062f\u0648', ar: '\u0639\u0631\u0628\u064a' };
+  var ZH_OPTS = [['en', 'EN'], ['src', 'Roman'], ['ur', '\u0627\u0631\u062f\u0648'], ['ar', '\u0639\u0631\u0628\u064a']];
+
+  function buildSwitcher(parent, compact) {
+    var wrap = document.createElement('div');
+    wrap.className = 'zh-lang' + (compact ? ' zh-lang-compact' : '');
+    if (!compact) {
+      ZH_OPTS.forEach(function (o) {
+        var b = document.createElement('button');
+        b.className = 'zh-lang-btn';
+        b.setAttribute('data-lang', o[0]);
+        b.type = 'button';
+        b.textContent = o[1];
+        b.onclick = function () { setLang(o[0]); };
+        wrap.appendChild(b);
+      });
+      parent.appendChild(wrap);
+      return wrap;
+    }
+    var cur = getLang();
+    var t = document.createElement('button');
+    t.className = 'zh-lang-toggle';
+    t.type = 'button';
+    t.innerHTML = '<span class="zh-globe">\uD83C\uDF10</span><span class="zh-cur">' + (ZH_LABELS[cur] || 'EN') + '</span><span class="zh-caret">\u25BE</span>';
+    var menu = document.createElement('div');
+    menu.className = 'zh-lang-menu';
+    ZH_OPTS.forEach(function (o) {
       var b = document.createElement('button');
       b.className = 'zh-lang-btn';
       b.setAttribute('data-lang', o[0]);
       b.type = 'button';
       b.textContent = o[1];
-      b.onclick = function () { setLang(o[0]); };
-      bar.appendChild(b);
+      b.onclick = function () { setLang(o[0]); wrap.classList.remove('zh-open'); };
+      menu.appendChild(b);
     });
-    parent.appendChild(bar);
-    return bar;
+    t.onclick = function (ev) {
+      ev.stopPropagation();
+      wrap.classList.toggle('zh-open');
+    };
+    document.addEventListener('click', function (ev) {
+      if (!wrap.contains(ev.target)) wrap.classList.remove('zh-open');
+    });
+    wrap.appendChild(t);
+    wrap.appendChild(menu);
+    parent.appendChild(wrap);
+    return wrap;
   }
 
   function initSwitcher() {
     var current = getLang();
     var nav = document.querySelector('header .nav-wrapper') || document.querySelector('header');
-    if (nav) buildSwitcher(nav);
+    if (nav) buildSwitcher(nav, true);
     else {
-      var fl = buildSwitcher(document.createElement('div'));
+      var fl = buildSwitcher(document.createElement('div'), true);
       fl.classList.add('zh-lang-float');
       document.body.appendChild(fl);
     }
+    var mm = document.querySelector('.mobile-menu');
+    if (mm) buildSwitcher(mm, false);
     setLang(current);
   }
 
