@@ -3,7 +3,7 @@ window.ZH_T = Object.assign(window.ZH_T || {}, {
   /* signup fragments */
   "Get plumbing jobs directly in your area. Registration is": { ur: "اپنے علاقے میں پلمبنگ کے کام براہ راست حاصل کریں۔ رجسٹریشن ہے", ar: "احصل على أعمال السباكة مباشرة في منطقتك. التسجيل" },
   "100% free": { ur: "100% مفت", ar: "مجاني 100%" },
-  "You agree the rate with the client; we keep a small network fee (15-20%) only on jobs we bring you — the rest goes straight to you. Rate aap khud set karte hain.": { ur: "ریٹ آپ کلائنٹ سے طے کرتے ہیں؛ ہم صرف ان کاموں پر چھوٹا نیٹ ورک فیس (15-20%) رکھتے ہیں جو ہم لائے — باقی براہ راست آپ کو۔ ریٹ آپ خود سیٹ کرتے ہیں۔", ar: "تتفق على السعر مع العميل؛ نحصل فقط على رسوم شبكة صغيرة (15-20%) على الأعمال التي نجلبهاإليك — والباقي يذهب إليك مباشرة. أنت تحدد السعر بنفسك." },
+  "You agree the rate with the client; we keep a small network fee (10%) only on jobs we bring you — the rest goes straight to you. Rate aap khud set karte hain.": { ur: "ریٹ آپ کلائنٹ سے طے کرتے ہیں؛ ہم صرف ان کاموں پر چھوٹا نیٹ ورک فیس (10%) رکھتے ہیں جو ہم لائے — باقی براہ راست آپ کو۔ ریٹ آپ خود سیٹ کرتے ہیں۔", ar: "تتفق على السعر مع العميل؛ نحصل فقط على رسوم شبكة صغيرة (10%) على الأعمال التي نجلبهاإليك — والباقي يذهب إليك مباشرة. أنت تحدد السعر بنفسك." },
   "e.g. 8 years, all-round plumber": { ur: "مثلاً: 8 سال، ہر طرح کا کام", ar: "مثال: 8 سنوات، سباك شامل" },
   "e.g. Pakistan, Saudi Arabia, UK": { ur: "مثلاً: پاکستان، سعودی عرب، برطانیہ", ar: "مثال: باكستان، السعودية، بريطانيا" },
   "e.g. Rawalpindi, Riyadh, London": { ur: "مثلاً: راولپنڈی، ریاض، لندن", ar: "مثال: راولبندي، الرياض، لندن" },
