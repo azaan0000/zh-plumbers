@@ -65,6 +65,7 @@ window.ZH_T = Object.assign(window.ZH_T || {}, {
   "Emergency Plumber in Islamabad": { ur: "اسلام آباد میں ایمرجنسی پلمبر", ar: "سباك طوارئ في إسلام آباد" },
   "Emergency leak repair": { ur: "ایمرجنسی لیکیج مرمت", ar: "إصلاح التسربات الطارئ" },
   "Faulty float valve causing overflow": { ur: "خراب فلوٹ والو جس سے اوور فلو ہوتا ہے", ar: "عطل صمام العوّامة مما يسبب طفح المياه" },
+  "Find a Plumber Worldwide": { ur: "دنیا بھر میں پلمبر تلاش کریں", ar: "ابحث عن سباك حول العالم" },
   "Fixture positions changed after tiling": { ur: "ٹائلیں لگانے کے بعد فٹنگز کی جگہیں تبدیل کرنا", ar: "تغيير مواضع التركيبات بعد وضع البلاط" },
   "Food waste in the trap": { ur: "ٹریپ میں کھانے کے فضلات جمع ہونا", ar: "بقايا الطعام في المصيدة" },
   "For emergencies we aim to send a plumber as quickly as possible. The exact time depends on traffic and the plumber nearest to you, and we confirm it when you contact us.": { ur: "ہنگامی صورتحال کے لیے ہماری کوشش ہوتی ہے کہ جلد از جلد پلمبر بھیجا جائے۔ صحیح وقت کا انحصار ٹریفک اور آپ کے قریب ترین پلمبر پر ہوتا ہے، اور ہم رابطہ کرنے پر وقت کی تصدیق کرتے ہیں۔", ar: "في حالات الطوارئ نهدف إلى إرسال سباك بأسرع وقت ممكن. يعتمد الوقت المحدد على حركة المرور وأقرب سباك إليك، ونؤكد ذلك عند تواصلك معنا." },
