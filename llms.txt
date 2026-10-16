@@ -16,7 +16,31 @@
 - Keep 100% of the client payment minus a 10% network fee on jobs the network brings
 - Registration is free; there is no monthly charge
 
-- Local SEO pages: Plumber in Lahore (https://azaan0000.github.io/zh-plumbers/plumber-lahore.html), Plumber in Karachi (https://azaan0000.github.io/zh-plumbers/plumber-karachi.html), Plumber in Faisalabad (https://azaan0000.github.io/zh-plumbers/plumber-faisalabad.html), plus 12 Islamabad/Rawalpindi sector pages and 10 problem-guide pages on the site.
+- Local SEO pages (Pakistan cities): https://azaan0000.github.io/zh-plumbers/plumber-lahore.html, https://azaan0000.github.io/zh-plumbers/plumber-karachi.html, https://azaan0000.github.io/zh-plumbers/plumber-faisalabad.html
+- Islamabad/Rawalpindi sector pages:
+- https://azaan0000.github.io/zh-plumbers/plumber-dha-islamabad.html
+- https://azaan0000.github.io/zh-plumbers/plumber-bahria-town-phase-7.html
+- https://azaan0000.github.io/zh-plumbers/plumber-bahria-town-phase-8.html
+- https://azaan0000.github.io/zh-plumbers/plumber-gulberg-greens.html
+- https://azaan0000.github.io/zh-plumbers/plumber-sector-f-7-islamabad.html
+- https://azaan0000.github.io/zh-plumbers/plumber-sector-g-11-islamabad.html
+- https://azaan0000.github.io/zh-plumbers/plumber-sector-i-8-islamabad.html
+- https://azaan0000.github.io/zh-plumbers/plumber-sector-e-11-islamabad.html
+- https://azaan0000.github.io/zh-plumbers/plumber-westridge-rawalpindi.html
+- https://azaan0000.github.io/zh-plumbers/plumber-chaklala-scheme-3.html
+- https://azaan0000.github.io/zh-plumbers/plumber-saddar-rawalpindi.html
+- https://azaan0000.github.io/zh-plumbers/plumber-adiala-road-rawalpindi.html
+- Problem guides (answer-first, FAQ schema):
+- https://azaan0000.github.io/zh-plumbers/low-water-pressure-repair.html
+- https://azaan0000.github.io/zh-plumbers/water-motor-installation-repair.html
+- https://azaan0000.github.io/zh-plumbers/water-tank-cleaning-installation.html
+- https://azaan0000.github.io/zh-plumbers/commode-flush-repair.html
+- https://azaan0000.github.io/zh-plumbers/kitchen-sink-drain-blockage.html
+- https://azaan0000.github.io/zh-plumbers/bathroom-drain-blockage.html
+- https://azaan0000.github.io/zh-plumbers/hot-cold-water-piping.html
+- https://azaan0000.github.io/zh-plumbers/mixer-tap-shower-installation.html
+- https://azaan0000.github.io/zh-plumbers/sink-washbasin-installation.html
+- https://azaan0000.github.io/zh-plumbers/bathroom-renovation-plumbing.html
 
 ## City directories
 - Toronto: https://azaan0000.github.io/zh-plumbers/plumber-toronto.html
