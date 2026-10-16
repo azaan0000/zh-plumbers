@@ -79,7 +79,7 @@ window.ZH_T = Object.assign(window.ZH_T || {}, {
   "📝 Instant Job Request": { en: "📝 Instant Job Request", ur: "📝 فوری جاب ریکوئسٹ", ar: "📝 طلب خدمة فوري" },
   "Form bharein — plumber khud aap se rabta karega": { en: "Fill the form — the plumber will contact you directly", ur: "فارم بھریں — پلمبھر خود آپ سے رابطہ کرے گا", ar: "املأ النموذج — سيتصل بك السباك مباشرة" },
   "Bina call kiye job request karein — plumber khud rabta karega": { en: "Request a job without calling — the plumber will contact you", ur: "کال کیے بغیر جاب ریکوئسٹ کریں — پلمبھر خود رابطہ کرے گا", ar: "اطلب الخدمة دون اتصال — سيتصل بك السباك" },
-  "Inspection free hai.": { en: "Inspection is free.", ur: "معائنہ مفت ہے۔", ar: "الفحص مجاني." }
+  "Inspection free hai.": { en: "Inspection is free.", ur: "معائنہ مفت ہے۔", ar: "الفحص مجاني." },
 
   /* signup success (text-first onboarding, Oct 16) */
   "✓ Registered! Now join the jobs group below — jobs are posted there and the first plumber to accept gets the job. Client pays you directly; ZH fee is 10% only on jobs we bring.": {"en": "✓ Registered! Now join the jobs group below — jobs are posted there and the first plumber to accept gets the job. Client pays you directly; ZH fee is 10% only on jobs we bring.", "ur": "✓ رجسٹر ہو گیا! اب نیچے دیے گئے جابز گروپ کو جوائن کریں — کام وہیں پوسٹ ہوتے ہیں اور پہلا قبول کرنے والا کام لے لیتا ہے۔ کلائنٹ آپ کو براہ راست پیمنٹ کرتا ہے؛ زیڈ ایچ کی فیس صرف 10% ان کاموں پر ہے جو ہم لاتے ہیں۔", "ar": "✓ تم التسجيل! انضم الآن إلى مجموعة الوظائف بالأسفل — تُنشر الأعمال هناك وأول سباك يقبل يحصل على العمل. العميل يدفع لك مباشرة؛ ورسوم ZH هي 10% فقط على الأعمال التي نجلبها."},
