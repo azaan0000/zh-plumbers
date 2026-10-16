@@ -146,7 +146,7 @@ function joinNow(){
     method:'POST',headers:{'Content-Type':'application/json'},
     body:JSON.stringify({name:name,phone:phone,country:country,city:city,latitude:isFinite(latitude)?latitude:null,longitude:isFinite(longitude)?longitude:null,areas:areas,services:services,experience:experience})
   }).then(function(r){return r.json();}).then(function(d){
-    if(d.ok){out.className='result ok';out.textContent=zhT('✓ Registered! The ZH Plumbers team will contact you and explain how the network works.');
+    if(d.ok){out.className='result ok';out.textContent=zhT(zhT("✓ Registered! Now join the jobs group below — jobs are posted there and the first plumber to accept gets the job. Client pays you directly; ZH fee is 10% only on jobs we bring."));
       document.getElementById('p-name').value='';document.getElementById('p-phone').value='';document.getElementById('p-areas').value='';}
     else{out.className='result bad';out.textContent=d.error||'Something went wrong — please contact us on WhatsApp.';}
   }).catch(function(){out.className='result bad';out.textContent=zhT('Network error — please try again.');});
@@ -181,9 +181,9 @@ function joinNow(){
  document.body.appendChild(d);
 })();
 </script>
-<script src="assets/dict-a.js?v=2026.1-10-03-2"></script>
-<script src="assets/dict-b.js?v=2026-10-03-2"></script>
-<script src="assets/dict-c.js?v=2026-10-03-2"></script>
+<script src="assets/dict-a.js?v=2026-10-16"></script>
+<script src="assets/dict-b.js?v=2026-10-16"></script>
+<script src="assets/dict-c.js?v=2026-10-16"></script>
 <script src="assets/dict-d.js?v=2026.1-10-03-2"></script>
 <script src="assets/dict-e.js?v=2026-10-10-1"></script>
 <script src="assets/lang.js?v=2026-10-03-2"></script>\n<script src="assets/modern.js?v=2026-10-03-2"></script>

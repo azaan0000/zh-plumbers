@@ -191,4 +191,8 @@ window.ZH_T = Object.assign(window.ZH_T || {}, {
   "— hum aapka kaam bhi gallery mein add karenge!": { en: "— we will add your work to the gallery too!", ur: "— ہم آپ کا کام بھی گیلری میں شامل کریں گے!", ar: "— سنضيف عملك إلى المعرض أيضاً!" },
   "BEFORE": { en: "BEFORE", ur: "پہلے", ar: "قبل" },
   "AFTER": { en: "AFTER", ur: "بعد", ar: "بعد" }
+
+  /* signup success (text-first onboarding, Oct 16) */
+  "✓ Registered! Now join the jobs group below — jobs are posted there and the first plumber to accept gets the job. Client pays you directly; ZH fee is 10% only on jobs we bring.": {"en": "✓ Registered! Now join the jobs group below — jobs are posted there and the first plumber to accept gets the job. Client pays you directly; ZH fee is 10% only on jobs we bring.", "ur": "✓ رجسٹر ہو گیا! اب نیچے دیے گئے جابز گروپ کو جوائن کریں — کام وہیں پوسٹ ہوتے ہیں اور پہلا قبول کرنے والا کام لے لیتا ہے۔ کلائنٹ آپ کو براہ راست پیمنٹ کرتا ہے؛ زیڈ ایچ کی فیس صرف 10% ان کاموں پر ہے جو ہم لاتے ہیں۔", "ar": "✓ تم التسجيل! انضم الآن إلى مجموعة الوظائف بالأسفل — تُنشر الأعمال هناك وأول سباك يقبل يحصل على العمل. العميل يدفع لك مباشرة؛ ورسوم ZH هي 10% فقط على الأعمال التي نجلبها."},
 });
+
