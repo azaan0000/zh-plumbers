@@ -39,13 +39,13 @@
  .join{background:#38bdf8;color:#0c2434}
  .foot{margin-top:28px;color:#64748b;font-size:13px}
  .foot a{color:#38bdf8}
+ .zhchips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+ .zhchip{background:#1e293b;border:1px solid #334155;border-radius:999px;padding:5px 12px;font-size:13px;color:#cbd5e1}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Service","serviceType":"Plumbing directory","areaServed":{"@type":"City","name":"Toronto"},"provider":{"@type":"Organization","name":"ZH Plumbers Network","url":"https://azaan0000.github.io/zh-plumbers/","telephone":"+923705840165"}}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I get a plumber in Toronto?","acceptedAnswer":{"@type":"Answer","text":"Browse the verified plumbers listed on this page and call or message them directly, or use the Find Plumbers Near Me page with your GPS location. Quotes are agreed on contact — there are no booking fees."}},{"@type":"Question","name":"Are these Toronto plumbers real businesses?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every listing is a real plumbing business sourced from public directories such as OpenStreetMap. The ZH Plumbers Network never lists fake or dummy data."}}]}
-</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are these plumbers licensed in Ontario?", "acceptedAnswer": {"@type": "Answer", "text": "The network lists real plumbing businesses in the Greater Toronto Area, and the GPS search on Find Plumbers Near Me shows who is closest. Ask any plumber for their licence number and proof of insurance before work starts, which is normal practice in Ontario."}}, {"@type": "Question", "name": "How fast can a plumber come in winter?", "acceptedAnswer": {"@type": "Answer", "text": "For a burst pipe, say so in the first message; emergency calls are handled before routine work. Shut the main valve first if water is running, then send the address and a photo of the leak so the plumber arrives with the right parts."}}, {"@type": "Question", "name": "How do I get a plumber in Toronto?", "acceptedAnswer": {"@type": "Answer", "text": "Browse the verified plumbers listed on this page and call or message them directly, or use the Find Plumbers Near Me page with your GPS location. Quotes are agreed on contact — there are no booking fees."}}, {"@type": "Question", "name": "Are these Toronto plumbers real businesses?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every listing is a real plumbing business sourced from public directories such as OpenStreetMap. The ZH Plumbers Network never lists fake or dummy data."}}]}</script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://azaan0000.github.io/zh-plumbers/"}, {"@type": "ListItem", "position": 2, "name": "Toronto", "item": "https://azaan0000.github.io/zh-plumbers/plumber-toronto.html"}]}
 </script>
@@ -76,6 +76,19 @@
     <a class="btn join" href="plumber-signup.html">&#128295; Plumber in Toronto? Join free</a>
   </div>
 
+    <div data-zh-enriched="1">
+  <h2>Common plumbing jobs in Toronto</h2>
+  <ul style="padding-left:20px;color:#cbd5e1;font-size:14.5px"><li style="margin:0 0 10px">Frozen and burst pipes are the winter emergency. Pipes running through exterior walls, garages and unheated crawl spaces freeze first, and the repair is usually a thaw plus a section replacement rather than a whole re-pipe.</li><li style="margin:0 0 10px">Homes built before about 1950 in older Toronto neighbourhoods often still have galvanised steel or lead service lines. Brown water in the morning or low pressure at the top floor points to the service line, not the fixtures.</li><li style="margin:0 0 10px">Basement flooding is usually a failed sump pump, a missing backflow valve, or a floor drain that cannot handle a heavy storm. A check before the spring rain costs less than a finished basement.</li></ul>
+
+  <h2>Areas covered in Toronto</h2>
+  <div class="zhchips"><span class="zhchip">Toronto</span><span class="zhchip">Scarborough</span><span class="zhchip">Etobicoke</span><span class="zhchip">North York</span><span class="zhchip">East York</span><span class="zhchip">Mississauga</span><span class="zhchip">Brampton</span></div>
+  </div>
+
+  <h2>More questions</h2>
+  <details><summary>Are these plumbers licensed in Ontario?</summary><p>The network lists real plumbing businesses in the Greater Toronto Area, and the GPS search on Find Plumbers Near Me shows who is closest. Ask any plumber for their licence number and proof of insurance before work starts, which is normal practice in Ontario.</p></details>
+  <details><summary>How fast can a plumber come in winter?</summary><p>For a burst pipe, say so in the first message; emergency calls are handled before routine work. Shut the main valve first if water is running, then send the address and a photo of the leak so the plumber arrives with the right parts.</p></details>
+  
+
   <h2>FAQ — Plumbers in Toronto</h2>
   <details><summary>How do I get a plumber in Toronto?</summary><p>Browse the verified plumbers listed on this page and call or message them directly, or use the Find Plumbers Near Me page with your GPS location. Quotes are agreed on contact — there are no booking fees.</p></details>
   <details><summary>Are these Toronto plumbers real businesses?</summary><p>Yes. Every listing is a real plumbing business sourced from public directories such as OpenStreetMap. The ZH Plumbers Network never lists fake or dummy data.</p></details>
@@ -104,7 +117,9 @@ fetch('https://superagent-f5d1d063.base44.app/functions/findPlumbersNearMe?city=
 <script src="assets/dict-c.js?v=2026-10-03-2"></script>
 <script src="assets/dict-d.js?v=2026-10-03-2"></script>
 <script src="assets/dict-e.js?v=2026-10-03-2"></script>
-<script src="assets/lang.js?v=2026-10-03-2"></script>\n<script src="assets/modern.js?v=2026-10-03-2"></script>
+<script src="assets/dict-j.js?v=2026-11-09"></script>
+<script src="assets/lang.js?v=2026-10-03-2"></script>
+<script src="assets/modern.js?v=2026-10-03-2"></script>
 <!-- cross-site links (SEO network) -->
 <section style="max-width:900px;margin:48px auto;padding:22px;border-radius:14px;background:#f7f7f7;color:#222;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif">
 <h2 style="font-size:1rem;margin:0 0 10px;color:#666;letter-spacing:.04em;text-transform:uppercase">Sites we run</h2>
