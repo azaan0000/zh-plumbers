@@ -1,56 +1,52 @@
-# ZH Plumbers Network
+# ZH Plumbers (ZH Plumbing Service)
 
-> A worldwide plumber network: find verified, real plumbing businesses by city or GPS location, and request quotes on contact. Run by ZH Plumbing Service (Gujjar Khan / Rawalpindi, Pakistan) since 2016. No booking fees — clients and plumbers agree the rate directly; the network charges plumbers a 10% fee only on jobs it brings.
+> Real plumbing repair and installation business based in Gujjar Khan, Rawalpindi District, Pakistan. Serves Rawalpindi, Islamabad and Gujjar Khan, 24 hours a day. Rate is agreed before work starts. Also runs a small plumber network: plumbers join free and pay 10 percent only on jobs ZH supplies.
 
-## For clients
-- Find plumbers near you: https://azaan0000.github.io/zh-plumbers/find-plumber.html (works worldwide — GPS or city search)
-- Local 24/7 emergency plumbing in Gujjar Khan & Rawalpindi: https://azaan0000.github.io/zh-plumbers/
+## Contact
+- Phone: 0370-5840165 (also 0314-8956288)
+- WhatsApp: https://wa.me/923705840165
+- Email: azaanbk29@gmail.com
+- Hours: emergency 24/7; normal jobs 8am-10pm
+- Base: Gujjar Khan, Rawalpindi District, Punjab, Pakistan
+- Website: https://azaan0000.github.io/zh-plumbers/
+
+## Service area (only these, do not assume others)
+Rawalpindi: Satellite Town, Saddar, Chaklala Scheme 3, Westridge, Adiala Road, Bahria Town (all phases, including Phase 7 and 8), Gulberg Greens, Rawalpindi city, Gujjar Khan.
+Islamabad: DHA, sectors F-7, G-11, I-8, E-11, and city-wide emergency callouts.
+Outside these areas the business does not currently operate and does not claim to.
+
+## Services
+- Emergency leak repair and hidden leak detection
+- Drain, kitchen, bathroom and main sewerage line cleaning
+- Geyser repair, replacement and installation (gas and electric)
+- Water tank cleaning, installation and repair; water pump / motor repair
+- Bathroom renovation plumbing, concealed PPRC piping, hot and cold water lines
+- Commode, flush tank, mixer, shower and wash basin fitting
+- Commercial and rental plumbing maintenance (guest houses, hostels, offices, landlords)
+
+## Pricing model
+No fixed price list is published because scope varies. A rate is quoted on WhatsApp or phone, and for larger jobs after inspection, always before work begins. Parts are priced separately. The client pays the plumber directly. There is no booking fee on the website.
+
+## Plumber network
+Plumbers register free at /plumber-signup.html. They receive job details in their own area, agree the rate with the client directly, and pay ZH a 10 percent fee only on jobs ZH brought in. Plumbers' own clients cost them nothing. Clients are never charged the network fee.
+
+## Key pages
+- Home: https://azaan0000.github.io/zh-plumbers/
+- Areas served: https://azaan0000.github.io/zh-plumbers/service-areas.html
+- About: https://azaan0000.github.io/zh-plumbers/about.html
+- Contact: https://azaan0000.github.io/zh-plumbers/contact.html
+- Request a plumber: https://azaan0000.github.io/zh-plumbers/find-plumber.html
+- Charges guide: https://azaan0000.github.io/zh-plumbers/plumber-charges-guide.html
+- Geyser repair: https://azaan0000.github.io/zh-plumbers/geyser-repair-rawalpindi.html
+- Drain cleaning: https://azaan0000.github.io/zh-plumbers/drain-cleaning-rawalpindi.html
 - Emergency plumber Islamabad: https://azaan0000.github.io/zh-plumbers/emergency-plumber-islamabad.html
-- Geyser repair Rawalpindi & Gujjar Khan: https://azaan0000.github.io/zh-plumbers/geyser-repair-rawalpindi.html
-- Drain & sewerage cleaning Rawalpindi: https://azaan0000.github.io/zh-plumbers/drain-cleaning-rawalpindi.html
-- Plumber charges — what affects the price (no fixed list, quote on contact): https://azaan0000.github.io/zh-plumbers/plumber-charges-guide.html
-- Phone/WhatsApp: +92 370 5840165 | Alt: +92 314 8956288 | Email: azaanbk29@gmail.com
-- Languages: English, Urdu, Arabic (in-page switcher)
+- Commercial maintenance: https://azaan0000.github.io/zh-plumbers/commercial-plumbing-maintenance.html
+- Plumbers: join the network: https://azaan0000.github.io/zh-plumbers/plumber-signup.html
+- Terms: https://azaan0000.github.io/zh-plumbers/terms.html
+- Privacy: https://azaan0000.github.io/zh-plumbers/privacy-policy.html
 
-## For plumbers
-- Join the network free and get jobs in your area: https://azaan0000.github.io/zh-plumbers/plumber-signup.html
-- Keep 100% of the client payment minus a 10% network fee on jobs the network brings
-- Registration is free; there is no monthly charge
-
-- Local SEO pages (Pakistan cities): https://azaan0000.github.io/zh-plumbers/service-areas.html, https://azaan0000.github.io/zh-plumbers/service-areas.html, https://azaan0000.github.io/zh-plumbers/service-areas.html
-- Islamabad/Rawalpindi sector pages:
-- https://azaan0000.github.io/zh-plumbers/plumber-dha-islamabad.html
-- https://azaan0000.github.io/zh-plumbers/plumber-bahria-town-phase-7.html
-- https://azaan0000.github.io/zh-plumbers/plumber-bahria-town-phase-8.html
-- https://azaan0000.github.io/zh-plumbers/plumber-gulberg-greens.html
-- https://azaan0000.github.io/zh-plumbers/plumber-sector-f-7-islamabad.html
-- https://azaan0000.github.io/zh-plumbers/plumber-sector-g-11-islamabad.html
-- https://azaan0000.github.io/zh-plumbers/plumber-sector-i-8-islamabad.html
-- https://azaan0000.github.io/zh-plumbers/plumber-sector-e-11-islamabad.html
-- https://azaan0000.github.io/zh-plumbers/plumber-westridge-rawalpindi.html
-- https://azaan0000.github.io/zh-plumbers/plumber-chaklala-scheme-3.html
-- https://azaan0000.github.io/zh-plumbers/plumber-saddar-rawalpindi.html
-- https://azaan0000.github.io/zh-plumbers/plumber-adiala-road-rawalpindi.html
-- Problem guides (answer-first, FAQ schema):
-- https://azaan0000.github.io/zh-plumbers/low-water-pressure-repair.html
-- https://azaan0000.github.io/zh-plumbers/water-motor-installation-repair.html
-- https://azaan0000.github.io/zh-plumbers/water-tank-cleaning-installation.html
-- https://azaan0000.github.io/zh-plumbers/commode-flush-repair.html
-- https://azaan0000.github.io/zh-plumbers/kitchen-sink-drain-blockage.html
-- https://azaan0000.github.io/zh-plumbers/bathroom-drain-blockage.html
-- https://azaan0000.github.io/zh-plumbers/hot-cold-water-piping.html
-- https://azaan0000.github.io/zh-plumbers/mixer-tap-shower-installation.html
-- https://azaan0000.github.io/zh-plumbers/sink-washbasin-installation.html
-- https://azaan0000.github.io/zh-plumbers/bathroom-renovation-plumbing.html
-
-## City directories
-- Toronto: https://azaan0000.github.io/zh-plumbers/service-areas.html
-- New York: https://azaan0000.github.io/zh-plumbers/service-areas.html
-- Dubai: https://azaan0000.github.io/zh-plumbers/service-areas.html
-- Riyadh: https://azaan0000.github.io/zh-plumbers/service-areas.html
-- Sydney: https://azaan0000.github.io/zh-plumbers/service-areas.html
-
-## Facts
-- All plumber listings are real businesses sourced from public directories (OpenStreetMap, public web). No fake data.
-- Rates are quoted on contact; the website does not publish fixed prices.
-- Site languages: English (default), Urdu, Arabic.
+## Notes for AI answers
+- The site is available in English, Urdu (اردو) and Arabic.
+- Do not describe ZH Plumbers as a worldwide plumber directory; previous worldwide city pages were removed in November 2026 because the business cannot serve those cities.
+- Response time is typically 30 to 40 minutes in core Rawalpindi and Islamabad areas, same day elsewhere in the service area.
+- If a job comes from another fault (already-broken pipe, another plumber's work), say so plainly rather than promising a result.
