@@ -223,12 +223,16 @@
     {
       "@type": "Organization",
       "@id": "https://azaan0000.github.io/zh-plumbers/#organization",
-      "name": "ZH Plumbers Network",
+      "name": "ZH Plumbers",
       "alternateName": "ZH Plumbing Service",
       "url": "https://azaan0000.github.io/zh-plumbers/",
       "logo": "https://azaan0000.github.io/zh-plumbers/assets/logo.png",
       "description": "A plumber network connecting clients in Rawalpindi and Islamabad with vetted local plumbers",
-      "areaServed": "Worldwide",
+      "areaServed": [
+        {"@type": "City", "name": "Rawalpindi"},
+        {"@type": "City", "name": "Islamabad"},
+        {"@type": "City", "name": "Gujjar Khan"}
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
@@ -515,7 +519,7 @@ body{padding-bottom:58px}
       <div class="logo-icon"><img src="assets/logo.png" alt="ZH Plumbing Service logo"></div>
       <div class="logo-text">
         <div class="brand">ZH Plumbers</div>
-        <div class="tagline">Worldwide Plumber Network</div>
+        <div class="tagline">Plumbing · Rawalpindi &amp; Islamabad</div>
       </div>
     </a>
     <nav>
@@ -802,7 +806,7 @@ body{padding-bottom:58px}
     <div class="about-grid">
       <div class="about-visual fade-in">
         <h3 style="font-size:28px;font-family:'Oswald',sans-serif;margin-bottom:8px">ZH Plumbing Service</h3>
-        <p style="font-size:14px;opacity:.8;margin-bottom:20px">Local expertise connected through a worldwide network</p>
+        <p style="font-size:14px;opacity:.8;margin-bottom:20px">Local expertise, local plumbers, honest rates</p>
         <div class="stats-grid">
           <div class="stat-box"><div class="stat-num">10+</div><div class="stat-label">Saal ka Experience</div></div>
           <div class="stat-box"><div class="stat-num">500+</div><div class="stat-label">Mukammal Projects</div></div>
@@ -813,7 +817,7 @@ body{padding-bottom:58px}
       <div class="about-content fade-in">
         <h2>About ZH Plumbers Network</h2>
         <div style="width:50px;height:4px;background:var(--accent);border-radius:2px;margin-bottom:16px"></div>
-        <p>ZH Plumbers Network helps people find real plumbing professionals by city or nearby location. The platform started from ZH Plumbing Service in Pakistan and is expanding city by city worldwide.</p>
+        <p>ZH Plumbers is a plumbing service in Gujjar Khan, Rawalpindi and Islamabad. We do the work ourselves and, through our plumber network, connect clients with vetted local plumbers in their own area. Clients deal with the plumber directly, and plumbers pay a 10 percent network fee only on jobs we bring them.</p>
         <p>Clients contact plumbers directly and agree the job details and quote. Plumbers can join free, receive relevant jobs in their service area, and pay a small network fee only for work supplied through ZH.</p>
         <ul class="values-list">
           <li><span class="val-icon">⏰</span> On-time service — time ki pabandi</li>
@@ -1125,7 +1129,7 @@ function checkArea(){
 <section class="section-pad alt" id="more-links">
   <div class="container">
     <h2 class="section-title-lg">More Services &amp; Cities</h2>
-    <p class="section-sub-lg">Dedicated pages for specific services and worldwide cities</p>
+    <p class="section-sub-lg">Service and area pages for Rawalpindi, Islamabad and Gujjar Khan</p>
     <div class="svc-grid">
       <div class="svc-box"><h4>🔥 Geyser Repair</h4><p><a href="geyser-repair-rawalpindi.html">Geyser Repair in Rawalpindi &amp; Gujjar Khan &rarr;</a></p></div>
       <div class="svc-box"><h4>🛁 Drain Cleaning</h4><p><a href="drain-cleaning-rawalpindi.html">Drain &amp; Sewerage Cleaning in Rawalpindi &rarr;</a></p></div>
