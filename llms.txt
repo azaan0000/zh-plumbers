@@ -17,7 +17,7 @@
 - Keep 100% of the client payment minus a 10% network fee on jobs the network brings
 - Registration is free; there is no monthly charge
 
-- Local SEO pages (Pakistan cities): https://azaan0000.github.io/zh-plumbers/plumber-lahore.html, https://azaan0000.github.io/zh-plumbers/plumber-karachi.html, https://azaan0000.github.io/zh-plumbers/plumber-faisalabad.html
+- Local SEO pages (Pakistan cities): https://azaan0000.github.io/zh-plumbers/service-areas.html, https://azaan0000.github.io/zh-plumbers/service-areas.html, https://azaan0000.github.io/zh-plumbers/service-areas.html
 - Islamabad/Rawalpindi sector pages:
 - https://azaan0000.github.io/zh-plumbers/plumber-dha-islamabad.html
 - https://azaan0000.github.io/zh-plumbers/plumber-bahria-town-phase-7.html
@@ -44,11 +44,11 @@
 - https://azaan0000.github.io/zh-plumbers/bathroom-renovation-plumbing.html
 
 ## City directories
-- Toronto: https://azaan0000.github.io/zh-plumbers/plumber-toronto.html
-- New York: https://azaan0000.github.io/zh-plumbers/plumber-new-york.html
-- Dubai: https://azaan0000.github.io/zh-plumbers/plumber-dubai.html
-- Riyadh: https://azaan0000.github.io/zh-plumbers/plumber-riyadh.html
-- Sydney: https://azaan0000.github.io/zh-plumbers/plumber-sydney.html
+- Toronto: https://azaan0000.github.io/zh-plumbers/service-areas.html
+- New York: https://azaan0000.github.io/zh-plumbers/service-areas.html
+- Dubai: https://azaan0000.github.io/zh-plumbers/service-areas.html
+- Riyadh: https://azaan0000.github.io/zh-plumbers/service-areas.html
+- Sydney: https://azaan0000.github.io/zh-plumbers/service-areas.html
 
 ## Facts
 - All plumber listings are real businesses sourced from public directories (OpenStreetMap, public web). No fake data.
